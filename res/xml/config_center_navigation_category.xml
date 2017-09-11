@@ -44,33 +44,6 @@
         android:title="@string/buttons_category" >
 
         <SwitchPreference
-            android:key="button_brightness_sw"
-            android:title="@string/button_brightness_sw_title"
-            android:persistent="false" />
-
-        <com.exui.config.center.preferences.CustomSeekBarPreference
-            android:key="button_brightness"
-            android:title="@string/button_brightness_title"
-            android:max="255"
-            settings:min="0"
-            settings:units=""
-            android:persistent="false" />
-
-        <ListPreference
-            android:dialogTitle="@string/backlight_timeout_title"
-            android:entries="@array/backlight_timeout_entries"
-            android:entryValues="@array/backlight_timeout_values"
-            android:key="backlight_timeout"
-            android:persistent="false"
-            android:title="@string/backlight_timeout_title" />
-
-        <com.exui.config.center.preferences.SystemSettingSwitchPreference
-            android:key="button_backlight_only_when_pressed"
-            android:title="@string/button_backlight_on_touch_only_title"
-            android:summary="@string/button_backlight_on_touch_only_summary"
-            android:defaultValue="false" />
-
-        <SwitchPreference
             android:key="hardware_keys_disable"
             android:title="@string/hardware_keys_disable_title" />
 
@@ -99,6 +72,40 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="backlight_category"
+        android:title="@string/backlight_category" >
+
+        <SwitchPreference
+            android:key="button_brightness_sw"
+            android:title="@string/button_brightness_sw_title"
+            android:persistent="false" />
+
+        <com.exui.config.center.preferences.CustomSeekBarPreference
+            android:key="button_brightness"
+            android:title="@string/button_brightness_title"
+            android:max="255"
+            settings:min="0"
+            settings:units=""
+            android:persistent="false" />
+
+        <ListPreference
+            android:dialogTitle="@string/backlight_timeout_title"
+            android:entries="@array/backlight_timeout_entries"
+            android:entryValues="@array/backlight_timeout_values"
+            android:key="backlight_timeout"
+            android:persistent="false"
+            android:title="@string/backlight_timeout_title" />
+
+        <com.exui.config.center.preferences.SystemSettingSwitchPreference
+            android:key="button_backlight_only_when_pressed"
+            android:title="@string/button_backlight_on_touch_only_title"
+            android:summary="@string/button_backlight_on_touch_only_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+
    <PreferenceCategory
         android:key="back_key"
         android:title="@string/hardware_keys_back_key_title">
@@ -126,6 +133,12 @@
     <PreferenceCategory
         android:key="home_key"
         android:title="@string/hardware_keys_home_key_title">
+
+        <com.exui.config.center.preferences.SystemSettingSwitchPreference
+            android:key="allow_incall_home"
+            android:title="@string/allow_incall_home_title"
+            android:summary="@string/allow_incall_home_summary"
+            android:defaultValue="true" />
 
         <com.exui.config.center.preferences.ActionPreference
             android:key="hwkeys_button_home_single_tap"
