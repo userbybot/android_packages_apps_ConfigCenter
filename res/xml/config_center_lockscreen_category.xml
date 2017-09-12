@@ -144,13 +144,19 @@
 
     <PreferenceCategory
         android:key="catalicios"
-        android:title="@string/statusbar_gestures_category">
+        android:title="@string/misc_category">
 
     <com.exui.config.center.preferences.SystemSettingSwitchPreference
         android:key="double_tap_sleep_lockscreen"
         android:title="@string/double_tap_sleep_lockscreen_title"
         android:summary="@string/double_tap_sleep_lockscreen_summary"
         android:defaultValue="false" />
+
+    <com.exui.config.center.preferences.GlobalSettingSwitchPreference
+        android:key="wake_when_plugged_or_unplugged"
+        android:title="@string/wakeup_when_plugged_unplugged_title"
+        android:summary="@string/wakeup_when_plugged_unplugged_summary"
+        android:defaultValue="true" />
 
     </PreferenceCategory>
 

@@ -517,4 +517,7 @@
     <string name="notification_guts_kill_app_button_title">Kill app button</string>
     <string name="notification_guts_kill_app_button_summary">Show a kill app button in the notification\'s longpress menu</string>
 
+    <string name="wakeup_when_plugged_unplugged_title">Wake up on charge</string>
+    <string name="wakeup_when_plugged_unplugged_summary">Wake up device if charger is plugged/unplugged</string>
+
 </resources>
