@@ -62,4 +62,17 @@
 
     </PreferenceCategory>
 
+
+    <PreferenceCategory
+        android:key="super_button_category"
+        android:title="@string/buttons_super_category_subcat" >
+
+        <PreferenceScreen
+            android:key="hardware_keys"
+            android:title="@string/hardware_keys"
+            android:summary="@string/hardware_keys_summary"
+            android:fragment="com.exui.config.center.HardwareKeys" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
