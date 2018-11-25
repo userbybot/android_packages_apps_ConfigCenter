@@ -85,4 +85,10 @@
             android:defaultValue="false" />
     </PreferenceCategory>         
 
+        <com.exui.config.center.preferences.SystemSettingSwitchPreference
+            android:key="notification_guts_kill_app_button"
+            android:title="@string/notification_guts_kill_app_button_title"
+            android:summary="@string/notification_guts_kill_app_button_summary"
+            android:defaultValue="false" />
+
 </PreferenceScreen>
