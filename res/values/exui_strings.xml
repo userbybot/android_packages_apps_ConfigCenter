@@ -20,4 +20,10 @@
     <!-- App Title -->
     <string name="config_center_title">Configuration Center</string>
 
+    <!-- Nav bar tuner-->
+    <string name="navbar_category">Navigation Bar</string>
+    <string name="navigation_title">Navigation Bar</string>
+    <string name="navbar_invert_layout_title">Invert layout</string>
+    <string name="navbar_invert_layout_summary">Use inverted layout for navbar buttons</string>
+
 </resources>
