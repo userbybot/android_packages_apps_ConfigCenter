@@ -18,11 +18,12 @@ package com.exui.config.center.preferences;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import androidx.preference.PreferenceViewHolder;
-import android.util.AttributeSet;
 import android.provider.Settings;
+import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Switch;
+
+import androidx.preference.PreferenceViewHolder;
 
 import com.android.settings.R;
 
@@ -88,7 +89,7 @@ public class MasterSwitchPreference extends TwoTargetPreference {
     }
 
     public boolean isChecked() {
-         return mChecked;
+        return mChecked;
     }
 
     public void setChecked(boolean checked) {
