@@ -18,6 +18,22 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/config_center_title" >
 
+    <!-- Statusbar -->
+    <PreferenceCategory
+        android:key="statusbar_category"
+        android:title="@string/statusbar_category">
+
+        <Preference
+            android:title="@string/statusbar_title"
+            android:summary="@string/status_bar_items_summary">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.systemui"
+                android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
+        </Preference>
+
+    </PreferenceCategory>
+
+
     <!-- Navbar -->
     <PreferenceCategory
         android:key="navbar_category"

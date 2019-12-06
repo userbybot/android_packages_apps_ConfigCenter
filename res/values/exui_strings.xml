@@ -20,6 +20,11 @@
     <!-- App Title -->
     <string name="config_center_title">Configuration Center</string>
 
+    <!-- Status bar tuner-->
+    <string name="statusbar_category">Status bar</string>
+    <string name="statusbar_title">Icons</string>
+    <string name="status_bar_items_summary">Add or remove status bar icons</string>
+
     <!-- Nav bar tuner-->
     <string name="navbar_category">Navigation Bar</string>
     <string name="navigation_title">Navigation Bar</string>
