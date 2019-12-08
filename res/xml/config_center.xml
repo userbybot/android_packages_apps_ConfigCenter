@@ -47,4 +47,18 @@
 
     </PreferenceCategory>
 
+    <!-- Gestures -->
+    <PreferenceCategory
+        android:key="gestures_category"
+        android:title="@string/gestures_category">
+
+        <!-- Double tap sleep on lockscreen -->
+        <com.exui.config.center.preferences.SystemSettingSwitchPreference
+            android:key="double_tap_sleep_lockscreen"
+            android:title="@string/double_tap_sleep_lockscreen_title"
+            android:summary="@string/double_tap_sleep_lockscreen_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
