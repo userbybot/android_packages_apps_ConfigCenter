@@ -39,4 +39,9 @@
     <string name="double_tap_sleep_gesture_title">Double tap to sleep</string>
     <string name="double_tap_sleep_gesture_summary">Double tap on the status bar to put the device to sleep</string>
 
+    <!-- Lockscreen -->
+    <string name="lockscreen_category">Lockscreen</string>
+    <string name="lockscreen_tuner_title">Lockscreen bottom shortcuts</string>
+    <string name="lockscreen_tuner_summary">Customize bottom left and right shortcuts</string>
+
 </resources>
