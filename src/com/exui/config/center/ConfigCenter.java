@@ -28,6 +28,7 @@ import android.os.Bundle;
 import android.view.Surface;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
+import androidx.preference.PreferenceScreen;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -41,6 +42,7 @@ public class ConfigCenter extends SettingsPreferenceFragment
 
     private ListPreference mHeadsUpTimeOut;
     private ListPreference mHeadsUpSnoozeTime;
+    private Preference mChargingLeds;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -71,6 +73,14 @@ public class ConfigCenter extends SettingsPreferenceFragment
                 Settings.System.HEADS_UP_NOTIFICATION_SNOOZE, defaultSnooze);
         mHeadsUpSnoozeTime.setValue(String.valueOf(headsUpSnooze));
         updateHeadsUpSnoozeTimeSummary(headsUpSnooze);
+
+        PreferenceScreen prefScreen = getPreferenceScreen();
+        mChargingLeds = (Preference) findPreference("charging_light");
+        if (mChargingLeds != null
+                && !getResources().getBoolean(
+                        com.android.internal.R.bool.config_intrusiveBatteryLed)) {
+            prefScreen.removePreference(mChargingLeds);
+        }
     }
 
     @Override

@@ -99,6 +99,12 @@
             android:summary="@string/hide_smart_replies_summary"
             android:defaultValue="false"/>
 
+        <Preference
+            android:key="charging_light"
+            android:title="@string/battery_light_settings"
+            android:summary="@string/battery_light_summary"
+            android:fragment="com.exui.config.center.fragments.BatteryLightSettings" />
+
         <ListPreference
             android:key="heads_up_time_out"
             android:title="@string/heads_up_time_out_title"
