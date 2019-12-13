@@ -93,6 +93,12 @@
             android:summary="@string/pulse_ambient_light_summary"
             android:fragment="com.exui.config.center.fragments.AmbientLight" />
 
+        <com.exui.config.center.preferences.SystemSettingSwitchPreference
+            android:key="hide_smart_replies"
+            android:title="@string/hide_smart_replies_title"
+            android:summary="@string/hide_smart_replies_summary"
+            android:defaultValue="false"/>
+
         <ListPreference
             android:key="heads_up_time_out"
             android:title="@string/heads_up_time_out_title"
