@@ -72,6 +72,13 @@
         android:key="lockscreen_category"
         android:title="@string/lockscreen_category">
 
+        <!-- FOD icon picker -->
+        <Preference
+            android:key="fod_icon_picker_category"
+            android:title="@string/fod_icon_picker_title"
+            android:summary="@string/fod_icon_picker_summary"
+            android:fragment="com.exui.config.center.fragments.FODIconPickerFragment" />
+
         <Preference
             android:title="@string/lockscreen_tuner_title"
             android:summary="@string/lockscreen_tuner_summary" >

@@ -43,6 +43,7 @@ public class ConfigCenter extends SettingsPreferenceFragment
     private ListPreference mHeadsUpTimeOut;
     private ListPreference mHeadsUpSnoozeTime;
     private Preference mChargingLeds;
+    private Preference mFODIconPicker;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -80,6 +81,11 @@ public class ConfigCenter extends SettingsPreferenceFragment
                 && !getResources().getBoolean(
                         com.android.internal.R.bool.config_intrusiveBatteryLed)) {
             prefScreen.removePreference(mChargingLeds);
+        }
+        mFODIconPicker = (Preference) findPreference("fod_icon_picker_category");
+        if (mFODIconPicker != null
+                && !getResources().getBoolean(com.android.internal.R.bool.config_supportsInDisplayFingerprint)) {
+            prefScreen.removePreference(mFODIconPicker);
         }
     }
 
