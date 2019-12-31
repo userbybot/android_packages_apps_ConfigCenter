@@ -21,11 +21,14 @@ package com.exui.config.center;
 import com.android.internal.logging.nano.MetricsProto;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.hardware.fingerprint.FingerprintManager;
 import android.os.Bundle;
 import android.view.Surface;
+import androidx.preference.SwitchPreference;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
@@ -39,6 +42,10 @@ public class ConfigCenter extends SettingsPreferenceFragment
 
     private static final String PREF_HEADS_UP_TIME_OUT = "heads_up_time_out";
     private static final String PREF_HEADS_UP_SNOOZE_TIME = "heads_up_snooze_time";
+    private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
+
+    private FingerprintManager mFingerprintManager;
+    private SwitchPreference mFingerprintVib;
 
     private ListPreference mHeadsUpTimeOut;
     private ListPreference mHeadsUpSnoozeTime;
@@ -56,6 +63,8 @@ public class ConfigCenter extends SettingsPreferenceFragment
         } catch (Exception e) {
             return;
         }
+
+        PreferenceScreen prefScreen = getPreferenceScreen();
 
         int defaultTimeOut = systemUiResources.getInteger(systemUiResources.getIdentifier(
                     "com.android.systemui:integer/heads_up_notification_decay", null, null));
@@ -75,7 +84,6 @@ public class ConfigCenter extends SettingsPreferenceFragment
         mHeadsUpSnoozeTime.setValue(String.valueOf(headsUpSnooze));
         updateHeadsUpSnoozeTimeSummary(headsUpSnooze);
 
-        PreferenceScreen prefScreen = getPreferenceScreen();
         mChargingLeds = (Preference) findPreference("charging_light");
         if (mChargingLeds != null
                 && !getResources().getBoolean(
@@ -86,6 +94,16 @@ public class ConfigCenter extends SettingsPreferenceFragment
         if (mFODIconPicker != null
                 && !getResources().getBoolean(com.android.internal.R.bool.config_supportsInDisplayFingerprint)) {
             prefScreen.removePreference(mFODIconPicker);
+        }
+
+        mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
+        mFingerprintVib = (SwitchPreference) findPreference(FINGERPRINT_VIB);
+        if (!mFingerprintManager.isHardwareDetected()){
+            prefScreen.removePreference(mFingerprintVib);
+        } else {
+        mFingerprintVib.setChecked((Settings.System.getInt(getContentResolver(),
+                Settings.System.FINGERPRINT_SUCCESS_VIB, 1) == 1));
+        mFingerprintVib.setOnPreferenceChangeListener(this);
         }
     }
 
@@ -98,12 +116,17 @@ public class ConfigCenter extends SettingsPreferenceFragment
                     headsUpTimeOut);
             updateHeadsUpTimeOutSummary(headsUpTimeOut);
             return true;
-        } else if (preference == mHeadsUpSnoozeTime) {
+        } if (preference == mHeadsUpSnoozeTime) {
             int headsUpSnooze = Integer.valueOf((String) newValue);
             Settings.System.putInt(getContentResolver(),
                     Settings.System.HEADS_UP_NOTIFICATION_SNOOZE,
                     headsUpSnooze);
             updateHeadsUpSnoozeTimeSummary(headsUpSnooze);
+            return true;
+        } if (preference == mFingerprintVib) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.FINGERPRINT_SUCCESS_VIB, value ? 1 : 0);
             return true;
         }
         return false;
