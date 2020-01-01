@@ -89,16 +89,22 @@
 
     </PreferenceCategory>
 
-    <!-- Quick settings -->
+    <!-- Interface -->
     <PreferenceCategory
-        android:key="qs_category"
-        android:title="@string/qs_category">
+        android:key="interface_category"
+        android:title="@string/interface_category">
 
         <com.exui.config.center.preferences.SystemSettingSwitchPreference
             android:key="dismiss_all_button"
             android:title="@string/enable_clear_all_button"
             android:summary="@string/enable_clear_all_button_summary"
             android:defaultValue="false" />
+
+        <com.exui.config.center.preferences.SystemSettingSwitchPreference
+            android:key="settings_spacer"
+            android:title="@string/enable_oneui"
+            android:summary="@string/enable_oneui_summary"
+            android:defaultValue="true" />
 
     </PreferenceCategory>
 

@@ -103,9 +103,12 @@
     <string name="fod_icon_picker_title">FOD icon picker</string>
     <string name="fod_icon_picker_summary">Pick your favourite fingerprint icon</string>
 
-    <!-- QS category -->
-    <string name="qs_category">Quick settings</string>
+    <!-- interface category -->
+    <string name="interface_category">Interface</string>
     <string name="enable_clear_all_button">Replace clear all text with nice button</string>
     <string name="enable_clear_all_button_summary">Show clear all notifications button in quick settings instead of default text one</string>
+
+    <string name="enable_oneui">OneUI</string>
+    <string name="enable_oneui_summary">Show spacer above settings actionbar for easier use with one hand\nNOTE: restart settings app to see effect</string>
 
 </resources>
