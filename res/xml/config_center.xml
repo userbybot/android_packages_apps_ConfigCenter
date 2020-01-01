@@ -112,6 +112,12 @@
             android:summary="@string/enable_oneui_summary"
             android:defaultValue="true" />
 
+        <com.exui.config.center.preferences.SystemSettingSwitchPreference
+            android:key="settings_suggestion_cards"
+            android:title="@string/settings_suggestions"
+            android:summary="@string/settings_suggestions_summary"
+            android:defaultValue="false" />
+
     </PreferenceCategory>
 
     <!-- Notifications -->
