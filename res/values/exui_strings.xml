@@ -28,6 +28,7 @@
     <!-- Nav bar tuner-->
     <string name="navbar_category">Navigation Bar</string>
     <string name="navigation_title">Navigation Bar</string>
+    <string name="navigation_subtitle">Customize navigation bar layout</string>
     <string name="navbar_invert_layout_title">Invert layout</string>
     <string name="navbar_invert_layout_summary">Use inverted layout for navbar buttons</string>
     <string name="nav_bar_layout">Navbar layout</string>
@@ -105,11 +106,11 @@
 
     <!-- FOD icon use wallpaper color -->
     <string name="fod_wallpaper_color">Use wallpaper color for FOD icon</string>
-    <string name="fod_wallpaper_color_summary">Uses adjusted primary wallpaper color for FOD icon\nNOTE: might look good only with some wallpapers</string>
+    <string name="fod_wallpaper_color_summary">Uses adjusted primary wallpaper color for FOD icon</string>
 
     <!-- interface category -->
     <string name="interface_category">Interface</string>
-    <string name="enable_clear_all_button">Replace clear all text with nice button</string>
+    <string name="enable_clear_all_button">Replace clear all text with nice button (beta)</string>
     <string name="enable_clear_all_button_summary">Show clear all notifications button in quick settings instead of default text one</string>
 
     <string name="enable_oneui">OneUI</string>
@@ -121,5 +122,10 @@
     <!-- Fingerprint authentication vibration -->
     <string name="fprint_sucess_vib_title">Fingerprint authentication vibration</string>
     <string name="fprint_sucess_vib_summary">Vibrate on successful fingerprint authentication</string>
+
+    <string name="uituner_title">UI tuner</string>
+    <string name="uituner_subtitle">Customizations of user interface</string>
+    <string name="fod_category">Fingerprint on display</string>
+    <string name="qs_category">Quick settings</string>
 
 </resources>
