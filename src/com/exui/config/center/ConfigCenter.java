@@ -104,7 +104,7 @@ public class ConfigCenter extends SettingsPreferenceFragment
         mFingerprintVib.setChecked((Settings.System.getInt(getContentResolver(),
                 Settings.System.FINGERPRINT_SUCCESS_VIB, 1) == 1));
         mFingerprintVib.setOnPreferenceChangeListener(this);
-        }
+        }   
     }
 
     @Override
