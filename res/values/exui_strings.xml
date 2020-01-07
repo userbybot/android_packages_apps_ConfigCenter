@@ -110,8 +110,6 @@
 
     <!-- interface category -->
     <string name="interface_category">Interface</string>
-    <string name="enable_clear_all_button">Replace clear all text with nice button (beta)</string>
-    <string name="enable_clear_all_button_summary">Show clear all notifications button in quick settings instead of default text one</string>
 
     <string name="enable_oneui">OneUI</string>
     <string name="enable_oneui_summary">Show spacer above settings actionbar for easier use with one hand\nNOTE: restart settings app to see effect</string>
@@ -123,10 +121,15 @@
     <string name="fprint_sucess_vib_title">Fingerprint authentication vibration</string>
     <string name="fprint_sucess_vib_summary">Vibrate on successful fingerprint authentication</string>
 
+    <!-- UI tuner -->
     <string name="uituner_title">UI tuner</string>
     <string name="uituner_subtitle">Customizations of user interface</string>
     <string name="fod_category">Fingerprint on display</string>
     <string name="qs_category">Quick settings</string>
+    <string name="enable_clear_all_button">Replace clear all text with nice button (beta)</string>
+    <string name="enable_clear_all_button_summary">Show clear all notifications button in quick settings instead of default text one</string>
+    <string name="blur_quicksettings">Blur behind quick settings (beta)</string>
+    <string name="blur_quicksettings_subtitle">blurs darkened background behind quick settings</string>
 
     <!-- Per App aspect Ratio -->
     <string name="action_save">Save</string>
