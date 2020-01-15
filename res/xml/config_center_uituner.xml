@@ -54,6 +54,12 @@
             android:summary="@string/blur_quicksettings_subtitle"
             android:defaultValue="true" />
 
+        <com.exui.config.center.preferences.SystemSettingSwitchPreference
+            android:key="new_screenshotui"
+            android:title="@string/new_screenshotui_title"
+            android:summary="@string/new_screenshotui_subtitle"
+            android:defaultValue="false" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
