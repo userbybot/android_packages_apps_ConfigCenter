@@ -49,6 +49,12 @@
             android:defaultValue="true" />
 
         <com.exui.config.center.preferences.SystemSettingSwitchPreference
+            android:key="qs_datausage"
+            android:title="@string/qs_datausage_title"
+            android:summary="@string/qs_datausage_subtitle"
+            android:defaultValue="false" />
+
+        <com.exui.config.center.preferences.SystemSettingSwitchPreference
             android:key="qs_blur"
             android:title="@string/blur_quicksettings"
             android:summary="@string/blur_quicksettings_subtitle"

@@ -132,6 +132,8 @@
     <string name="blur_quicksettings_subtitle">blurs darkened background behind quick settings</string>
     <string name="new_screenshotui_title">Refreshed screenshot animation (alpha!)</string>
     <string name="new_screenshotui_subtitle">Shows slide in/out animation instead of aosp one + notification</string>
+    <string name="qs_datausage_title">Show data usage in qs header</string>
+    <string name="qs_datausage_subtitle">Shows data usage in quick settings header of sim used for data</string>
 
     <!-- Per App aspect Ratio -->
     <string name="action_save">Save</string>
