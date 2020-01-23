@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2018 Havoc-OS
+     Copyright (C) 2018 ExtendedUI
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- App Title -->
+    <string name="config_center_title">Centrum Konfiguracji</string>
+
+    <!-- Status bar tuner-->
+    <string name="statusbar_category">Pasek Statusu</string>
+    <string name="statusbar_title">Ikony</string>
+    <string name="status_bar_items_summary">Dodaj lub usuń ikony paska statusu</string>
+
+    <!-- Nav bar tuner-->
+    <string name="navbar_category">Navigation Bar</string>
+    <string name="navigation_title">Navigation Bar</string>
+    <string name="navigation_subtitle">Zmień układ przycisków nawigacji</string>
+    <string name="navbar_invert_layout_title">Odwróć układ</string>
+    <string name="navbar_invert_layout_summary">Użyj odwróconego układu dla przycisków nawigacji</string>
+    <string name="nav_bar_layout">Układ przycisków nawigacji</string>
+
+    <!-- Gestures -->
+    <string name="gestures_category">Gesty</string>
+    <string name="double_tap_sleep_lockscreen_title">Podwójne dotknięcie aby uśpić</string>
+    <string name="double_tap_sleep_lockscreen_summary">Dotknij podwójnie gdziekolwiek na ekranie blokady aby uśpić</string>
+    <string name="double_tap_sleep_gesture_title">Podwójne dotknięcie aby uśpić</string>
+    <string name="double_tap_sleep_gesture_summary">Dotknij podwójnie na pasku stanu aby uśpić</string>
+
+    <!-- Lockscreen -->
+    <string name="lockscreen_category">Ekran Blokady</string>
+    <string name="lockscreen_tuner_title">Skróty na ekranie blokady</string>
+    <string name="lockscreen_tuner_summary">Zmień lewy oraz prawy skrót na dole ekranu blokady</string>
+
+    <!-- Heads up -->
+    <string name="notifications_category">Powiadomienia</string>
+    <string name="heads_up_time_out_title">Czas pokazywania</string>
+    <string name="heads_up_time_out_summary">Wyskakujące powiadomienia będą widoczne przez <xliff:g id="number">%d</xliff:g> sekund</string>
+    <string name="heads_up_time_out_2sec">2 sekund</string>
+    <string name="heads_up_time_out_4sec">4 sekund</string>
+    <string name="heads_up_time_out_5sec">5 sekund</string>
+    <string name="heads_up_time_out_6sec">6 sekund</string>
+    <string name="heads_up_time_out_8sec">8 sekund</string>
+    <string name="heads_up_time_out_10sec">10 sekund</string>
+
+    <!-- Heads up snooze -->
+    <string name="heads_up_snooze_title">Drzemka od wyskakujących powiadomień</string>
+    <string name="heads_up_snooze_summary_one_minute">Przeciągnięcie do góry zablokuje wyświetlanie wyskakująch powiadomień dla danej aplikacji przez minutę</string>
+    <string name="heads_up_snooze_summary">Przeciągnięcie do góry zablokuje wyświetlanie wyskakująch powiadomień dla danej aplikacji przez <xliff:g id="number">%d</xliff:g> minut</string>
+    <string name="heads_up_snooze_disabled_summary">Snooze timer is disabled</string>
+    <string name="heads_up_snooze_1min">1 minutę</string>
+    <string name="heads_up_snooze_5min">5 minut</string>
+    <string name="heads_up_snooze_10min">10 minut</string>
+    <string name="heads_up_snooze_15min">15 minut</string>
+    <string name="heads_up_snooze_20min">20 minut</string>
+
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">Wybór Kolorów</string>
+    <string name="press_color_to_apply">Wybierz kolor poniżej</string>
+    <string name="set">Ustaw</string>
+    <string name="color_default">Domyślne</string>
+
+    <!-- Ambient edge lighting -->
+    <string name="pulse_ambient_light_title">Podświetlenie Krawędzi</string>
+    <string name="pulse_ambient_light_summary">Podświetl boczne krawędzie ekranu przy powiadomieniu</string>
+    <string name="pulse_ambient_light_color_title">Kolor podświetlenia krawędzi</string>
+
+    <!-- Smart replies -->
+    <string name="hide_smart_replies_title">Ukryj inteligentne odpowiedzi</string>
+    <string name="hide_smart_replies_summary">Ukryj inteligentne odpowiedzi aby zaoszczędzić miejsce w wyskakujących powiadomień</string>
+
+    <!-- Battery light -->
+    <string name="light_settings_header">Ustawienia diody powiadomień</string>
+    <string name="battery_light_settings">Dioda podczas ładowania</string>
+    <string name="battery_light_enable">Włącz</string>
+    <string name="battery_light_allow_on_dnd_title">Dioda ładowania w trybie nieprzeszkadzać</string>
+    <string name="battery_light_low_blinking_title">Miganie przy niskim poziomie baterii</string>
+    <string name="battery_light_cat">Kolor diody podczas ładowania baterii</string>
+    <string name="battery_light_low_color">Niski poziom baterii</string>
+    <string name="battery_light_medium_color">Średni poziom baterii</string>
+    <string name="battery_light_full_color">Prawie peła bateria</string>
+    <string name="battery_light_reallyfull_color">Pełna bateria</string>
+
+    <!-- FOD icon picker -->
+    <string name="fod_icon_picker_title">Wybór ikony FOD</string>
+    <string name="fod_icon_picker_summary">Wybierz ikony czytnika lini papilarnych</string>
+
+    <!-- FOD icon use wallpaper color -->
+    <string name="fod_wallpaper_color">Użyj koloru tapety dla ikony FOD</string>
+    <string name="fod_wallpaper_color_summary">Używa przewodniego koloru tapety dla ikony czytnika linii papilarnych</string>
+
+    <!-- interface category -->
+    <string name="interface_category">Interface</string>
+
+    <string name="settings_suggestions">Sugestie ustawień</string>
+    <string name="settings_suggestions_summary">Włącz sugerowanie ustawień na głownym ekranie ustawień\nUWAGA: uruchom ponownie aplikacje ustawień aby zobaczyć efekt</string>
+
+    <!-- Fingerprint authentication vibration -->
+    <string name="fprint_sucess_vib_title">Wibracja czytnika linii papilarnych</string>
+    <string name="fprint_sucess_vib_summary">Wibracja po udanym odblokowaniu czytnikiem linii papilarnych</string>
+
+    <!-- UI tuner -->
+    <string name="uituner_title">UI tuner</string>
+    <string name="uituner_subtitle">Dostosowanie wyglądu UI</string>
+    <string name="fod_category">Czytnik linii papilarnych w ekranie</string>
+    <string name="qs_category">Szybkie ustawienia</string>
+    <string name="enable_clear_all_button">Zastąp napis usuń wszystkie ładną ikonką (beta)</string>
+    <string name="enable_clear_all_button_summary">Pokazuje przycisk usuwania wszystkich powiadomień zamiast domyślnego tekstu</string>
+    <string name="blur_quicksettings">Rozmycie tła w QS (beta)</string>
+    <string name="blur_quicksettings_subtitle">Rozmywa tło w QS zamiast przyciemniać</string>
+    <string name="new_screenshotui_title">Nowa animacja zrzutu ekranu (alpha!)</string>
+    <string name="new_screenshotui_subtitle">Shows slide in/out animation instead of aosp one + notification</string>
+    <string name="qs_datausage_title">Pokaż użycie danych w nagłówku QS</string>
+    <string name="qs_datausage_subtitle">Pokazuje użycie transmisji danych komórkowych w nagłówku QS</string>
+
+    <!-- Power menu -->
+    <string name="hardware_keys_power_key_title">Przyciski Zasilania</string>
+    <string name="power_menu_title">Menu zasilania</string>
+    <string name="power_menu_subtitle">Dostosuj menu zasilania</string>
+    <string name="power_menu_screenshot_title">Zrzut ekranu</string>
+    <string name="power_menu_screenshot_summary">Długie przytrzymanie dla nagrywania ekranu</string>
+    <string name="power_menu_airplane_title">Tryb samolotowy</string>
+    <string name="power_menu_lockdown_title">Blokada</string>
+
+    <!-- Advanced restart options -->
+    <string name="advanced_reboot_title">Zaawansowany restart</string>
+    <string name="advanced_reboot_summary">Dodaj opcję restartu do recovery lub bootloadera</string>
+    <string name="advanced_reboot_title_keyguard">Zaawansowany restart na ekranie blokady</string>
+    <string name="advanced_reboot_summary_keyguard">Dodaj opcję restartu do recovery lub bootloadera również na ekrnaie blokady</string>
+
+    <!-- Volume rocker music control -->
+    <string name="volume_rocker_music_controls_title">Kontrola odtwarzania muzyki</string>
+    <string name="volume_rocker_music_controls_summary">Długie przytrzymanie przycisków głośności przy wyłączonym ekranie przwija utwory</string>
+
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Wartość: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">Domyślne</string>
+    <string name="custom_seekbar_default_value_to_set">Domyślna wartość: <xliff:g id="v">%s</xliff:g>\nLong press to set</string>
+    <string name="custom_seekbar_default_value_is_set">Domyślna wartość jest ustawiona</string>
+
+    <!-- Network traffic -->
+    <string name="traffic_title">Wskaźnik ruchu sieciowego</string>
+    <string name="traffic_title_summary">Dostosuj wskaźnik ruchu sieciowego</string>
+    <string name="network_traffic_title">Ruch sieciowy</string>
+    <string name="network_traffic_type">Wybierz typ aktywności sieciowej</string>
+    <string name="show_network_traffic_up">Wysyłanie</string>
+    <string name="show_network_traffic_down">Pobieranie</string>
+    <string name="show_network_traffic_all">Wysyłanie i pobieranie</string>
+    <string name="network_traffic_state_title">Pokaż ruch sieciowy na pasku statusu</string>
+    <string name="network_traffic_autohide_threshold_title">Automatycznie ukrywaj poniżej (KB/s)</string>
+    <string name="network_traffic_hidearrow">Ukryj strzałki</string>
+    <string name="network_traffic_hidearrow_summary">Ukrywa strzałki wskaźnika ruchu sieciowego</string>
+
+</resources>
