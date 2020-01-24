@@ -98,7 +98,7 @@ public class ConfigCenter extends SettingsPreferenceFragment
 
         mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
         mFingerprintVib = (SwitchPreference) findPreference(FINGERPRINT_VIB);
-        if (!mFingerprintManager.isHardwareDetected()){
+        if (mFingerprintManager == null){
             prefScreen.removePreference(mFingerprintVib);
         } else {
         mFingerprintVib.setChecked((Settings.System.getInt(getContentResolver(),
