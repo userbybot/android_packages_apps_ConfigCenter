@@ -108,6 +108,10 @@
     <string name="fod_wallpaper_color">Use wallpaper color for FOD icon</string>
     <string name="fod_wallpaper_color_summary">Uses adjusted primary wallpaper color for FOD icon</string>
 
+    <!-- FOD animations -->
+    <string name="fod_recog_animation">FOD recognizing animation</string>
+    <string name="fod_recog_animation_summary">Shows animation while reading your finger</string>
+
     <!-- interface category -->
     <string name="interface_category">Interface</string>
 
