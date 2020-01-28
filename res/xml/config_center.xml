@@ -169,6 +169,12 @@
             android:entryValues="@array/heads_up_snooze_values"
             android:persistent="false" />
 
+        <com.exui.config.center.preferences.SystemSettingSwitchPreference
+            android:key="notification_sound_vib_screen_on"
+            android:title="@string/notification_sound_vib_screen_on_title"
+            android:summary="@string/notification_sound_vib_screen_on_summary"
+            android:defaultValue="true" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
