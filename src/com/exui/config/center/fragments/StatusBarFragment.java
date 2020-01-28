@@ -1,11 +1,11 @@
 /*
- * Copyright (C) 2017 AospExtended ROM Project
+ * Copyright (C) 2019 ExtendedUI
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *      http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.exui.config.center.fragments;
 
 import com.android.internal.logging.nano.MetricsProto;
@@ -52,17 +51,20 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.Collections;
 
-public class Traffic extends SettingsPreferenceFragment implements
-        OnPreferenceChangeListener {
 
+public class StatusBarFragment extends SettingsPreferenceFragment
+        implements Preference.OnPreferenceChangeListener {
+
+    public static final String TAG = "StatusBarFragment";
     private CustomSeekBarPreference mThreshold;
     private SystemSettingSwitchPreference mNetMonitor;
 
-    @Override
-    public void onCreate(Bundle icicle) {
-        super.onCreate(icicle);
+    private ContentResolver mResolver;
 
-        addPreferencesFromResource(R.xml.config_center_traffic);
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        addPreferencesFromResource(R.xml.config_center_statusbar_category);
 
         PreferenceScreen prefSet = getPreferenceScreen();
         final ContentResolver resolver = getActivity().getContentResolver();
@@ -82,17 +84,18 @@ public class Traffic extends SettingsPreferenceFragment implements
     }
 
     @Override
-    public boolean onPreferenceChange(Preference preference, Object objValue) {
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mNetMonitor) {
-            boolean value = (Boolean) objValue;
+            boolean value = (Boolean) newValue;
             Settings.System.putIntForUser(getActivity().getContentResolver(),
                     Settings.System.NETWORK_TRAFFIC_STATE, value ? 1 : 0,
                     UserHandle.USER_CURRENT);
             mNetMonitor.setChecked(value);
             mThreshold.setEnabled(value);
             return true;
-        } else if (preference == mThreshold) {
-            int val = (Integer) objValue;
+        }
+        if (preference == mThreshold) {
+            int val = (Integer) newValue;
             Settings.System.putIntForUser(getContentResolver(),
                     Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, val,
                     UserHandle.USER_CURRENT);

@@ -17,16 +17,46 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- Categories -->
+    <string name="statusbar_category">Status bar</string>
+    <string name="lockscreen_category">Lockscreen</string>
+    <string name="uituner_category">UI tuner</string>
+    <string name="notifications_category">Notifications</string>
+    <string name="navigation_category">Navigation &amp; Buttons</string>
+    <string name="about_category">About</string>
+
+    <!-- Sub categories -->
+    <string name="statusbar_icons_category">Icons</string>
+    <string name="statusbar_gestures_category">Gestures</string>
+    <string name="network_traffic_indicator_category">Network indicator</string>
+    <string name="qs_category">Quick settings</string>
+    <string name="interface_category">Interface</string>
+    <string name="fod_category">Fingerprint on display</string>
+    <string name="navbar_category">Navigation bar</string>
+    <string name="buttons_category">Buttons</string>
+    <string name="links_category">Links</string>
+    <string name="devs_category">Devs</string>
+    <string name="maintainers_category">Maintainers</string>
+
+    <!-- About section -->
+    <string name="downloads_title">Downloads</string>
+    <string name="downloads_summary">Place where you will find newest builds for all officially supported devices</string>
+    <string name="telegram_channel">News channel</string>
+    <string name="telegram_channel_summary">Telegram channel where you will find changelogs, new features and general news about the rom</string>
+    <string name="telegram_chat">Support chat</string>
+    <string name="telegram_chat_summary">Telegram chat where we provice support for this rom</string>
+    <string name="donation_link">Donations</string>
+    <string name="donation_link_summary">If you like the rom and want ot help buy us a coffe</string>
+    
     <!-- App Title -->
     <string name="config_center_title">Configuration Center</string>
 
     <!-- Status bar tuner-->
-    <string name="statusbar_category">Status bar</string>
+    
     <string name="statusbar_title">Icons</string>
     <string name="status_bar_items_summary">Add or remove status bar icons</string>
 
     <!-- Nav bar tuner-->
-    <string name="navbar_category">Navigation Bar</string>
     <string name="navigation_title">Navigation Bar</string>
     <string name="navigation_subtitle">Customize navigation bar layout</string>
     <string name="navbar_invert_layout_title">Invert layout</string>
@@ -41,12 +71,10 @@
     <string name="double_tap_sleep_gesture_summary">Double tap on the status bar to put the device to sleep</string>
 
     <!-- Lockscreen -->
-    <string name="lockscreen_category">Lockscreen</string>
     <string name="lockscreen_tuner_title">Lockscreen bottom shortcuts</string>
     <string name="lockscreen_tuner_summary">Customize bottom left and right shortcuts</string>
 
     <!-- Heads up -->
-    <string name="notifications_category">Notifications</string>
     <string name="heads_up_time_out_title">Time out</string>
     <string name="heads_up_time_out_summary">Peeking notifications will show for <xliff:g id="number">%d</xliff:g> seconds</string>
     <string name="heads_up_time_out_2sec">2 seconds</string>
@@ -112,9 +140,6 @@
     <string name="fod_recog_animation">FOD recognizing animation</string>
     <string name="fod_recog_animation_summary">Shows animation while reading your finger</string>
 
-    <!-- interface category -->
-    <string name="interface_category">Interface</string>
-
     <string name="enable_oneui">OneUI</string>
     <string name="enable_oneui_summary">Show spacer above settings actionbar for easier use with one hand\nNOTE: restart settings app to see effect</string>
 
@@ -128,9 +153,7 @@
     <!-- UI tuner -->
     <string name="uituner_title">UI tuner</string>
     <string name="uituner_subtitle">Customizations of user interface</string>
-    <string name="fod_category">Fingerprint on display</string>
-    <string name="qs_category">Quick settings</string>
-    <string name="enable_clear_all_button">Replace clear all text with nice button (beta)</string>
+    <string name="enable_clear_all_button">Replace clear all text with nice button</string>
     <string name="enable_clear_all_button_summary">Show clear all notifications button in quick settings instead of default text one</string>
     <string name="blur_quicksettings">Blur behind quick settings (beta)</string>
     <string name="blur_quicksettings_subtitle">blurs darkened background behind quick settings</string>

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 Extended-UI
+ * Copyright (C) 2019 ExtendedUI
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -39,23 +39,24 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
 
-public class UiTunerFragment extends SettingsPreferenceFragment
+public class UITunerFragment extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
+    public static final String TAG = "UITunerFragment";
     private static final String KEY_ASPECT_RATIO_APPS_ENABLED = "aspect_ratio_apps_enabled";
     private static final String KEY_ASPECT_RATIO_APPS_LIST = "aspect_ratio_apps_list";
     private static final String KEY_ASPECT_RATIO_CATEGORY = "aspect_ratio_category";
     private static final String KEY_ASPECT_RATIO_APPS_LIST_SCROLLER = "aspect_ratio_apps_list_scroller";
 
-    public static final String TAG = "UiTunerFragment";
-
+    private ContentResolver mResolver;
     private AppMultiSelectListPreference mAspectRatioAppsSelect;
     private ScrollAppsViewPreference mAspectRatioApps;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.config_center_uituner);
+        addPreferencesFromResource(R.xml.config_center_uituner_category);
+
         PreferenceScreen prefScreen = getPreferenceScreen();
 
         if (!getResources().getBoolean(com.android.internal.R.bool.config_supportsInDisplayFingerprint)) {

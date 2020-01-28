@@ -1,6 +1,6 @@
 /*
  *  Copyright (C) 2018 Havoc-OS
- *  Copyright (C) 2018 ExtendedUI
+ *  Copyright (C) 2019 ExtendedUI
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -40,113 +40,15 @@ import android.provider.Settings;
 public class ConfigCenter extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
-    private static final String PREF_HEADS_UP_TIME_OUT = "heads_up_time_out";
-    private static final String PREF_HEADS_UP_SNOOZE_TIME = "heads_up_snooze_time";
-    private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
-
-    private FingerprintManager mFingerprintManager;
-    private SwitchPreference mFingerprintVib;
-
-    private ListPreference mHeadsUpTimeOut;
-    private ListPreference mHeadsUpSnoozeTime;
-    private Preference mChargingLeds;
-    private Preference mFODIconPicker;
-
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.config_center);
-
-        Resources systemUiResources;
-        try {
-            systemUiResources = getPackageManager().getResourcesForApplication("com.android.systemui");
-        } catch (Exception e) {
-            return;
-        }
-
-        PreferenceScreen prefScreen = getPreferenceScreen();
-
-        int defaultTimeOut = systemUiResources.getInteger(systemUiResources.getIdentifier(
-                    "com.android.systemui:integer/heads_up_notification_decay", null, null));
-        mHeadsUpTimeOut = (ListPreference) findPreference(PREF_HEADS_UP_TIME_OUT);
-        mHeadsUpTimeOut.setOnPreferenceChangeListener(this);
-        int headsUpTimeOut = Settings.System.getInt(getContentResolver(),
-                Settings.System.HEADS_UP_TIMEOUT, defaultTimeOut);
-        mHeadsUpTimeOut.setValue(String.valueOf(headsUpTimeOut));
-        updateHeadsUpTimeOutSummary(headsUpTimeOut);
-
-        int defaultSnooze = systemUiResources.getInteger(systemUiResources.getIdentifier(
-                    "com.android.systemui:integer/heads_up_default_snooze_length_ms", null, null));
-        mHeadsUpSnoozeTime = (ListPreference) findPreference(PREF_HEADS_UP_SNOOZE_TIME);
-        mHeadsUpSnoozeTime.setOnPreferenceChangeListener(this);
-        int headsUpSnooze = Settings.System.getInt(getContentResolver(),
-                Settings.System.HEADS_UP_NOTIFICATION_SNOOZE, defaultSnooze);
-        mHeadsUpSnoozeTime.setValue(String.valueOf(headsUpSnooze));
-        updateHeadsUpSnoozeTimeSummary(headsUpSnooze);
-
-        mChargingLeds = (Preference) findPreference("charging_light");
-        if (mChargingLeds != null
-                && !getResources().getBoolean(
-                        com.android.internal.R.bool.config_intrusiveBatteryLed)) {
-            prefScreen.removePreference(mChargingLeds);
-        }
-        mFODIconPicker = (Preference) findPreference("fod_icon_picker_category");
-        if (mFODIconPicker != null
-                && !getResources().getBoolean(com.android.internal.R.bool.config_supportsInDisplayFingerprint)) {
-            prefScreen.removePreference(mFODIconPicker);
-        }
-
-        mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
-        mFingerprintVib = (SwitchPreference) findPreference(FINGERPRINT_VIB);
-        if (mFingerprintManager == null){
-            prefScreen.removePreference(mFingerprintVib);
-        } else {
-        mFingerprintVib.setChecked((Settings.System.getInt(getContentResolver(),
-                Settings.System.FINGERPRINT_SUCCESS_VIB, 1) == 1));
-        mFingerprintVib.setOnPreferenceChangeListener(this);
-        }   
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mHeadsUpTimeOut) {
-            int headsUpTimeOut = Integer.valueOf((String) newValue);
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.HEADS_UP_TIMEOUT,
-                    headsUpTimeOut);
-            updateHeadsUpTimeOutSummary(headsUpTimeOut);
-            return true;
-        } if (preference == mHeadsUpSnoozeTime) {
-            int headsUpSnooze = Integer.valueOf((String) newValue);
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.HEADS_UP_NOTIFICATION_SNOOZE,
-                    headsUpSnooze);
-            updateHeadsUpSnoozeTimeSummary(headsUpSnooze);
-            return true;
-        } if (preference == mFingerprintVib) {
-            boolean value = (Boolean) newValue;
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.FINGERPRINT_SUCCESS_VIB, value ? 1 : 0);
-            return true;
-        }
         return false;
-    }
-
-    private void updateHeadsUpTimeOutSummary(int value) {
-        String summary = getResources().getString(R.string.heads_up_time_out_summary,
-                value / 1000);
-        mHeadsUpTimeOut.setSummary(summary);
-    }
-
-    private void updateHeadsUpSnoozeTimeSummary(int value) {
-        if (value == 0) {
-            mHeadsUpSnoozeTime.setSummary(getResources().getString(R.string.heads_up_snooze_disabled_summary));
-        } else if (value == 60000) {
-            mHeadsUpSnoozeTime.setSummary(getResources().getString(R.string.heads_up_snooze_summary_one_minute));
-        } else {
-            String summary = getResources().getString(R.string.heads_up_snooze_summary, value / 60 / 1000);
-            mHeadsUpSnoozeTime.setSummary(summary);
-        }
     }
 
     @Override

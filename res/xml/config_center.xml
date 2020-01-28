@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2018 Havoc-OS
+<!-- Copyright (C) 2019 ExtendedUI
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -18,169 +18,40 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/config_center_title" >
 
-    <!-- Statusbar -->
-    <PreferenceCategory
+    <Preference
         android:key="statusbar_category"
-        android:title="@string/statusbar_category">
+        android:fragment="com.exui.config.center.fragments.StatusBarFragment"
+        android:title="@string/statusbar_category"
+        android:icon="@drawable/statusbar_category_icon" />
 
-        <Preference
-            android:title="@string/statusbar_title"
-            android:summary="@string/status_bar_items_summary">
-            <intent android:action="android.intent.action.MAIN"
-                android:targetPackage="com.android.systemui"
-                android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
-        </Preference>
-
-        <Preference
-            android:key="traffic"
-            android:fragment="com.exui.config.center.fragments.Traffic"
-            android:title="@string/traffic_title"
-            android:summary="@string/traffic_title_summary" />
-
-    </PreferenceCategory>
-
-
-    <!-- Navbar -->
-    <PreferenceCategory
-        android:key="navbar_category"
-        android:title="@string/navbar_category">
-
-        <!-- Navigation Bar -->
-        <Preference
-            android:key="navigation_category"
-            android:title="@string/navigation_title" 
-            android:summary="@string/navigation_subtitle"
-	        android:fragment="com.exui.config.center.fragments.Navigation" />
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="power_key"
-        android:title="@string/hardware_keys_power_key_title" >
-
-        <PreferenceScreen
-            android:key="power_menu"
-            android:title="@string/power_menu_title"
-            android:summary="@string/power_menu_subtitle"
-            android:fragment="com.exui.config.center.fragments.PowerMenuActions" />
-
-    </PreferenceCategory>
-
-    <!-- Gestures -->
-    <PreferenceCategory
-        android:key="gestures_category"
-        android:title="@string/gestures_category">
-
-        <!-- Double tap sleep on lockscreen -->
-        <com.exui.config.center.preferences.SystemSettingSwitchPreference
-            android:key="double_tap_sleep_lockscreen"
-            android:title="@string/double_tap_sleep_lockscreen_title"
-            android:summary="@string/double_tap_sleep_lockscreen_summary"
-            android:defaultValue="false" />
-
-        <com.exui.config.center.preferences.SystemSettingSwitchPreference
-            android:key="double_tap_sleep_gesture"
-            android:title="@string/double_tap_sleep_gesture_title"
-            android:summary="@string/double_tap_sleep_gesture_summary"
-            android:defaultValue="false" />
-
-        <com.exui.config.center.preferences.SystemSettingSwitchPreference
-            android:key="volume_button_music_control"
-            android:summary="@string/volume_rocker_music_controls_summary"
-            android:title="@string/volume_rocker_music_controls_title"
-            android:defaultValue="false" />
-
-    </PreferenceCategory>
-
-    <!-- Lock screen -->
-    <PreferenceCategory
+    <Preference
         android:key="lockscreen_category"
-        android:title="@string/lockscreen_category">
+        android:fragment="com.exui.config.center.fragments.LockscreenFragment"
+        android:title="@string/lockscreen_category"
+        android:icon="@drawable/lockscreen_category_icon" />
 
-        <SwitchPreference
-            android:key="fingerprint_success_vib"
-            android:title="@string/fprint_sucess_vib_title"
-            android:summary="@string/fprint_sucess_vib_summary"
-            android:persistent="false" />
+    <Preference
+        android:key="uituner_category"
+        android:fragment="com.exui.config.center.fragments.UITunerFragment"
+        android:title="@string/uituner_category"
+        android:icon="@drawable/uituner_category_icon" />
 
-        <Preference
-            android:title="@string/lockscreen_tuner_title"
-            android:summary="@string/lockscreen_tuner_summary" >
-            <intent android:action="android.intent.action.MAIN"
-                android:targetPackage="com.android.systemui"
-                android:targetClass="com.android.systemui.tuner.LockscreenActivity" />
-        </Preference>
-
-        <com.exui.config.center.preferences.SystemSettingSwitchPreference
-            android:key="lockscreen_media_metadata"
-            android:title="@string/media_art_title"
-            android:summary="@string/media_art_summary"
-            android:defaultValue="true" />
-
-    </PreferenceCategory>
-
-    <!-- Interface -->
-    <PreferenceCategory
-        android:key="interface_category"
-        android:title="@string/interface_category">
-
-        <Preference
-            android:key="ui_tuner"
-            android:title="@string/uituner_title"
-            android:summary="@string/uituner_subtitle"
-            android:fragment="com.exui.config.center.fragments.UiTunerFragment" />
-
-        <Preference
-            android:key="charging_light"
-            android:title="@string/battery_light_settings"
-            android:summary="@string/battery_light_summary"
-            android:fragment="com.exui.config.center.fragments.BatteryLightSettings" />
-
-        <com.exui.config.center.preferences.SystemSettingSwitchPreference
-            android:key="settings_suggestion_cards"
-            android:title="@string/settings_suggestions"
-            android:summary="@string/settings_suggestions_summary"
-            android:defaultValue="false" />
-
-    </PreferenceCategory>
-
-    <!-- Notifications -->
-    <PreferenceCategory
+    <Preference
         android:key="notifications_category"
-        android:title="@string/notifications_category">
+        android:fragment="com.exui.config.center.fragments.NotificationsFragment"
+        android:title="@string/notifications_category"
+        android:icon="@drawable/notifications_category_icon" />
 
-        <Preference
-            android:key="ambient_light_settings"
-            android:title="@string/ambient_light_settings_title"
-            android:summary="@string/pulse_ambient_light_summary"
-            android:fragment="com.exui.config.center.fragments.AmbientLight" />
+    <Preference
+        android:key="navigation_category"
+        android:fragment="com.exui.config.center.fragments.NavigationFragment"
+        android:title="@string/navigation_category"
+        android:icon="@drawable/navigation_category_icon" />
 
-        <com.exui.config.center.preferences.SystemSettingSwitchPreference
-            android:key="hide_smart_replies"
-            android:title="@string/hide_smart_replies_title"
-            android:summary="@string/hide_smart_replies_summary"
-            android:defaultValue="false"/>
-
-        <ListPreference
-            android:key="heads_up_time_out"
-            android:title="@string/heads_up_time_out_title"
-            android:entries="@array/heads_up_time_out_entries"
-            android:entryValues="@array/heads_up_time_out_values"
-            android:persistent="false" />
-
-        <ListPreference
-            android:key="heads_up_snooze_time"
-            android:title="@string/heads_up_snooze_title"
-            android:entries="@array/heads_up_snooze_entries"
-            android:entryValues="@array/heads_up_snooze_values"
-            android:persistent="false" />
-
-        <com.exui.config.center.preferences.SystemSettingSwitchPreference
-            android:key="notification_sound_vib_screen_on"
-            android:title="@string/notification_sound_vib_screen_on_title"
-            android:summary="@string/notification_sound_vib_screen_on_summary"
-            android:defaultValue="true" />
-
-    </PreferenceCategory>
+    <Preference
+        android:key="about_category"
+        android:fragment="com.exui.config.center.fragments.AboutFragment"
+        android:title="@string/about_category"
+        android:icon="@drawable/information_category_icon" />
 
 </PreferenceScreen>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2019 ExtendedUI
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<PreferenceScreen
+    android:title="@string/about_category"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+
+    <PreferenceCategory
+        android:key="links_category"
+        android:title="@string/links_category" >
+
+        <Preference
+            android:title="@string/downloads_title"
+            android:summary="@string/downloads_summary"
+            android:icon="@drawable/website_icon">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://sourceforge.net/projects/extendedui/files/"/>
+        </Preference>
+
+        <Preference
+            android:title="@string/telegram_channel"
+            android:summary="@string/telegram_channel_summary"
+            android:icon="@drawable/telegram_icon">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/extendedui"/>
+        </Preference>
+
+        <Preference
+            android:title="@string/telegram_chat"
+            android:summary="@string/telegram_chat_summary"
+            android:icon="@drawable/telegram_icon">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/extendeduichat"/>
+        </Preference>
+
+        <Preference
+            android:title="@string/donation_link"
+            android:summary="@string/donation_link_summary"
+            android:icon="@drawable/donation_icon">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://www.paypal.com/paypalme2/00day0"/>
+        </Preference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="devs_category"
+        android:title="@string/devs_category" >
+
+        <Preference
+            android:title="cfdddd / 00day0"
+            android:summary="ROM Developer\nXiaomi Mi 9 maintainer">
+        </Preference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="maintainers_category"
+        android:title="@string/maintainers_category" >
+    
+        <Preference
+            android:title="xK4m3l"
+            android:summary="Xiaomi Mi 5s Plus maintainer\nXiaomi Mi Mix 2s maintainer">
+        </Preference>
+
+        <Preference
+            android:title="criticalerror99"
+            android:summary="Xiaomi Mi 9T maintainer">
+        </Preference>
+
+        <Preference
+            android:title="hacker1024"
+            android:summary="Xiaomi Mi 9T Pro maintainer">
+        </Preference>
+
+        <Preference
+            android:title="AmyButDark"
+            android:summary="Xiaomi Mi 6x maintainer">
+        </Preference>
+
+        <Preference
+            android:title="FranticCoin"
+            android:summary="Xiaomi Redmi 3s maintainer">
+        </Preference>
+
+        <Preference
+            android:title="SiddharthBharadwaj"
+            android:summary="Xiaomi Mi A2 maintainer">
+        </Preference>
+
+        <Preference
+            android:title="ugly_kid_af"
+            android:summary="Redmi Note 7 Pro maintainer">
+        </Preference>
+
+        <Preference
+            android:title="richie_flicker"
+            android:summary="Motorola Moto G5 Plus maintainer">
+        </Preference>
+
+        <Preference
+            android:title="xyron"
+            android:summary="Asus Max Pro M1 maintainer">
+        </Preference>
+
+        <Preference
+            android:title="Dzienny"
+            android:summary="OnePlus 5T maintainer">
+        </Preference>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
