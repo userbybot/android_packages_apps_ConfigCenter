@@ -44,9 +44,9 @@
     <string name="telegram_channel">News channel</string>
     <string name="telegram_channel_summary">Telegram channel where you will find changelogs, new features and general news about the rom</string>
     <string name="telegram_chat">Support chat</string>
-    <string name="telegram_chat_summary">Telegram chat where we provice support for this rom</string>
+    <string name="telegram_chat_summary">Telegram chat where we provide support for this rom</string>
     <string name="donation_link">Donations</string>
-    <string name="donation_link_summary">If you like the rom and want ot help buy us a coffe</string>
+    <string name="donation_link_summary">If you like the rom and want to help buy us a Coffe</string>
     
     <!-- App Title -->
     <string name="config_center_title">Configuration Center</string>
