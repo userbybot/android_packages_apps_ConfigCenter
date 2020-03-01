@@ -140,6 +140,10 @@
     <string name="fod_recog_animation">FOD recognizing animation</string>
     <string name="fod_recog_animation_summary">Shows animation while reading your finger</string>
 
+    <!-- screen off FOD -->
+    <string name="scr_off_fod">Screen off FOD</string>
+    <string name="scr_off_fod_summary">Use fingerprint reader also while screen is off</string>
+
     <string name="enable_oneui">OneUI</string>
     <string name="enable_oneui_summary">Show spacer above settings actionbar for easier use with one hand\nNOTE: restart settings app to see effect</string>
 

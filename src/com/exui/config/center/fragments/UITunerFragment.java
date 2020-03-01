@@ -47,10 +47,12 @@ public class UITunerFragment extends SettingsPreferenceFragment
     private static final String KEY_ASPECT_RATIO_APPS_LIST = "aspect_ratio_apps_list";
     private static final String KEY_ASPECT_RATIO_CATEGORY = "aspect_ratio_category";
     private static final String KEY_ASPECT_RATIO_APPS_LIST_SCROLLER = "aspect_ratio_apps_list_scroller";
+    private static final String KEY_SCREEN_OFF_FOD = "screen_off_fod";
 
     private ContentResolver mResolver;
     private AppMultiSelectListPreference mAspectRatioAppsSelect;
     private ScrollAppsViewPreference mAspectRatioApps;
+    private SwitchPreference mScreenOffFOD;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -58,6 +60,8 @@ public class UITunerFragment extends SettingsPreferenceFragment
         addPreferencesFromResource(R.xml.config_center_uituner_category);
 
         PreferenceScreen prefScreen = getPreferenceScreen();
+
+        mResolver = getActivity().getContentResolver();
 
         if (!getResources().getBoolean(com.android.internal.R.bool.config_supportsInDisplayFingerprint)) {
             prefScreen.removePreference(findPreference("fod_category"));
@@ -86,6 +90,13 @@ public class UITunerFragment extends SettingsPreferenceFragment
             mAspectRatioAppsSelect.setValues(valuesList);
             mAspectRatioAppsSelect.setOnPreferenceChangeListener(this);
         }
+
+        boolean mScreenOffFODValue = Settings.System.getInt(mResolver,
+                Settings.System.SCREEN_OFF_FOD, 0) != 0;
+
+        mScreenOffFOD = (SwitchPreference) findPreference(KEY_SCREEN_OFF_FOD);
+        mScreenOffFOD.setChecked(mScreenOffFODValue);
+        mScreenOffFOD.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -102,6 +113,12 @@ public class UITunerFragment extends SettingsPreferenceFragment
                 Settings.System.putString(getContentResolver(),
                     Settings.System.ASPECT_RATIO_APPS_LIST, "");
             }
+            return true;
+        }
+        if (preference == mScreenOffFOD) {
+            int mScreenOffFODValue = (Boolean) newValue ? 1 : 0;
+            Settings.System.putInt(mResolver, Settings.System.SCREEN_OFF_FOD, mScreenOffFODValue);
+            Settings.Secure.putInt(mResolver, Settings.Secure.DOZE_ALWAYS_ON, mScreenOffFODValue);
             return true;
         }
         return false;
