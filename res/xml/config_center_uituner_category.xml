@@ -93,12 +93,6 @@
         android:title="@string/interface_category">
 
         <com.exui.config.center.preferences.SystemSettingSwitchPreference
-            android:key="new_screenshotui"
-            android:title="@string/new_screenshotui_title"
-            android:summary="@string/new_screenshotui_subtitle"
-            android:defaultValue="false" />
-
-        <com.exui.config.center.preferences.SystemSettingSwitchPreference
             android:key="settings_suggestion_cards"
             android:title="@string/settings_suggestions"
             android:summary="@string/settings_suggestions_summary"

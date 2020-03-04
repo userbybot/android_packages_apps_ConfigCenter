@@ -161,8 +161,6 @@
     <string name="enable_clear_all_button_summary">Show clear all notifications button in quick settings instead of default text one</string>
     <string name="blur_quicksettings">Blur behind quick settings (beta)</string>
     <string name="blur_quicksettings_subtitle">blurs darkened background behind quick settings</string>
-    <string name="new_screenshotui_title">Refreshed screenshot animation</string>
-    <string name="new_screenshotui_subtitle">Shows slide in/out animation instead of aosp one + notification</string>
     <string name="qs_datausage_title">Show data usage in qs header</string>
     <string name="qs_datausage_subtitle">Shows data usage in quick settings header of sim used for data</string>
 
