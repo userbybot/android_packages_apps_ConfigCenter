@@ -39,6 +39,7 @@
             android:layout_width="@dimen/fod_picker_item_size"
             android:layout_height="@dimen/fod_picker_item_size"
             android:src="@drawable/fod_icon_default_1"
+            android:tint="#878787"
             android:scaleType="centerInside"
             android:padding="@dimen/fod_picker_item_padding"
             android:layout_margin="@dimen/fod_picker_item_margin"
