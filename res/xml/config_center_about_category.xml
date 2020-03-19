@@ -86,16 +86,6 @@
         </Preference>
 
         <Preference
-            android:title="hacker1024"
-            android:summary="Xiaomi Mi 9T Pro maintainer">
-        </Preference>
-
-        <Preference
-            android:title="AmyButDark"
-            android:summary="Xiaomi Mi 6x maintainer">
-        </Preference>
-
-        <Preference
             android:title="FranticCoin"
             android:summary="Xiaomi Redmi 3s maintainer">
         </Preference>
@@ -103,16 +93,6 @@
         <Preference
             android:title="SiddharthBharadwaj"
             android:summary="Xiaomi Mi A2 maintainer">
-        </Preference>
-
-        <Preference
-            android:title="ugly_kid_af"
-            android:summary="Redmi Note 7 Pro maintainer">
-        </Preference>
-
-        <Preference
-            android:title="richie_flicker"
-            android:summary="Motorola Moto G5 Plus maintainer">
         </Preference>
 
         <Preference
