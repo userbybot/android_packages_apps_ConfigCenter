@@ -95,8 +95,10 @@ public class UITunerFragment extends SettingsPreferenceFragment
                 Settings.System.SCREEN_OFF_FOD, 0) != 0;
 
         mScreenOffFOD = (SwitchPreference) findPreference(KEY_SCREEN_OFF_FOD);
-        mScreenOffFOD.setChecked(mScreenOffFODValue);
-        mScreenOffFOD.setOnPreferenceChangeListener(this);
+        if (mScreenOffFOD != null) {
+            mScreenOffFOD.setChecked(mScreenOffFODValue);
+            mScreenOffFOD.setOnPreferenceChangeListener(this);
+        }
     }
 
     @Override
