@@ -29,6 +29,7 @@ import com.android.settings.display.OverlayCategoryPreferenceController;
 import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.core.lifecycle.Lifecycle;
 
+import com.exui.config.center.display.AccentColorPreferenceController;
 import com.android.settings.R;
 
 import java.util.ArrayList;
@@ -64,6 +65,7 @@ public class ThemeEngineFragment extends DashboardFragment {
         final List<AbstractPreferenceController> controllers = new ArrayList<>();
         controllers.add(new OverlayCategoryPreferenceController(context,
                 "android.theme.customization.accent_color"));
+        controllers.add(new AccentColorPreferenceController(context));
         controllers.add(new OverlayCategoryPreferenceController(context,
                 "android.theme.customization.font"));
         controllers.add(new OverlayCategoryPreferenceController(context,
