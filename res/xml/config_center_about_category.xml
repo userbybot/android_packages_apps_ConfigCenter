@@ -21,15 +21,15 @@
     <PreferenceCategory
         android:key="links_category"
         android:title="@string/links_category" >
-
+         
         <Preference
             android:title="@string/downloads_title"
             android:summary="@string/downloads_summary"
             android:icon="@drawable/website_icon">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://sourceforge.net/projects/extendedui/files/"/>
-        </Preference>
+                android:data="https://sourceforge.net/projects/extendedreborn/files/"/>
+        </Preference>         
 
         <Preference
             android:title="@string/telegram_channel"
@@ -37,7 +37,7 @@
             android:icon="@drawable/telegram_icon">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/extendedui"/>
+                android:data="https://t.me/extendedrebornchannel"/>
         </Preference>
 
         <Preference
@@ -46,7 +46,7 @@
             android:icon="@drawable/telegram_icon">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/extendeduichat"/>
+                android:data="https://t.me/extendedrebornchat"/>
         </Preference>
 
         <Preference
@@ -84,7 +84,11 @@
             android:title="AshutoshSundresh"
             android:summary="OnePlus 6T Maintainer">
         </Preference>
-
+         
+         <Preference
+            android:title="MezzLasha"
+            android:summary="Xiaomi Laurel Sprout Maintainer">
+        </Preference>        
 
     </PreferenceCategory>
 
