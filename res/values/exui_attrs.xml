@@ -32,4 +32,9 @@
         <attr name="continuousUpdates" format="boolean" />
     </declare-styleable>
 
+    <declare-styleable name="SystemSettingListPreference">
+        <attr name="dependentValue" format="string"/>
+    </declare-styleable>
+
+
 </resources>
