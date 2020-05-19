@@ -22,6 +22,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemProperties;
 import android.provider.Settings;
+import androidx.preference.PreferenceCategory;
 import android.text.TextUtils;
 import androidx.preference.*;
 
@@ -98,6 +99,13 @@ public class UITunerFragment extends SettingsPreferenceFragment
         if (mScreenOffFOD != null) {
             mScreenOffFOD.setChecked(mScreenOffFODValue);
             mScreenOffFOD.setOnPreferenceChangeListener(this);
+        }
+        boolean enableSmartPixels = getContext().getResources().
+                getBoolean(com.android.internal.R.bool.config_enableSmartPixels);
+        Preference smartPixelsPref = (Preference) findPreference("smart_pixels");
+
+        if (!enableSmartPixels){
+            overallPreferences.removePreference(smartPixelsPref);
         }
     }
 
