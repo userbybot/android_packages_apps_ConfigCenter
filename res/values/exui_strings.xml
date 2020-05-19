@@ -235,7 +235,7 @@
 
     <!-- QS rows and columns -->
     <string name="qs_column_rows_settings_title">QS panel settings</string>
-    <string name="qs_columns_rows_category_title">QS columns and rows</string>
+    <string name="qs_columns_rows_category_title">QS columns and rows (Requires a SystemUI restart) </string>
     <string name="qs_rows_columns_title">QS rows and columns</string>
     <string name="qs_rows_portrait_title">Tiles rows on portrait</string>
     <string name="qs_rows_landscape_title">Tiles rows on landscape</string>
