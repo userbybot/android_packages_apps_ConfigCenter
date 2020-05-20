@@ -34,6 +34,7 @@
     <string name="links_category">Links</string>
     <string name="devs_category">Devs</string>
     <string name="maintainers_category">Maintainers</string>
+    <string name="general_system_stuff_preference">System Behaviour</string>
 
     <!-- About section -->
     <string name="downloads_title">Downloads</string>

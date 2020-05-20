@@ -59,6 +59,8 @@ public class UITunerFragment extends SettingsPreferenceFragment
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.config_center_uituner_category);
+        final PreferenceScreen prefSet = getPreferenceScreen();
+        PreferenceCategory overallPreferences = (PreferenceCategory) findPreference("misc_overall_cat");
 
         PreferenceScreen prefScreen = getPreferenceScreen();
 
