@@ -87,7 +87,7 @@
          
          <Preference
             android:title="MezzLasha"
-            android:summary="Xiaomi Laurel Sprout Maintainer">
+            android:summary="Xiaomi Mi A3 Maintainer">
         </Preference>        
 
     </PreferenceCategory>
