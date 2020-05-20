@@ -22,7 +22,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemProperties;
 import android.provider.Settings;
-import androidx.preference.PreferenceCategory;
 import android.text.TextUtils;
 import androidx.preference.*;
 
@@ -59,8 +58,6 @@ public class UITunerFragment extends SettingsPreferenceFragment
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.config_center_uituner_category);
-        final PreferenceScreen prefSet = getPreferenceScreen();
-        PreferenceCategory overallPreferences = (PreferenceCategory) findPreference("misc_overall_cat");
 
         PreferenceScreen prefScreen = getPreferenceScreen();
 
@@ -101,13 +98,6 @@ public class UITunerFragment extends SettingsPreferenceFragment
         if (mScreenOffFOD != null) {
             mScreenOffFOD.setChecked(mScreenOffFODValue);
             mScreenOffFOD.setOnPreferenceChangeListener(this);
-        }
-        boolean enableSmartPixels = getContext().getResources().
-                getBoolean(com.android.internal.R.bool.config_enableSmartPixels);
-        Preference smartPixelsPref = (Preference) findPreference("smart_pixels");
-
-        if (!enableSmartPixels){
-            overallPreferences.removePreference(smartPixelsPref);
         }
     }
 

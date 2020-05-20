@@ -49,6 +49,12 @@
         android:icon="@drawable/navigation_category_icon" />
 
     <Preference
+        android:key="misc_category"
+        android:fragment="com.exui.config.center.fragments.MiscFragment"
+        android:title="@string/misc_category"
+        android:icon="@drawable/misc_category_icon" />
+
+    <Preference
         android:key="about_category"
         android:fragment="com.exui.config.center.fragments.AboutFragment"
         android:title="@string/about_category"
