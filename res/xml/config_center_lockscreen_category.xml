@@ -43,5 +43,17 @@
         android:title="@string/double_tap_sleep_lockscreen_title"
         android:summary="@string/double_tap_sleep_lockscreen_summary"
         android:defaultValue="false" />
+     
+    <PreferenceCategory
+        android:key="ambient_display_tuner"
+        android:title="@string/ambient_display_tuner">     
+         
+    <SwitchPreference
+        android:key="pulse_on_new_tracks"
+        android:title="@string/pulse_on_new_tracks_title"
+        android:summary="@string/pulse_on_new_tracks_summary"
+        settings:controller="com.android.settings.display.PulseOnNewTracksPreferenceController" />
+         
+    </PreferenceCategory>         
 
 </PreferenceScreen>
