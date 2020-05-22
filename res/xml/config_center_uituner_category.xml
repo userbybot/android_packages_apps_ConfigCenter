@@ -17,7 +17,7 @@
     android:title="@string/uituner_category"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
-
+	
     <PreferenceCategory
         android:key="fod_category"
         android:title="@string/fod_category">
