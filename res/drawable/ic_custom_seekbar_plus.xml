@@ -11,12 +11,16 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<vector xmlns:android="http://schemas.android.com/apk/res/android"
-        android:width="24.0dp"
-        android:height="24.0dp"
-        android:viewportWidth="48.0"
-        android:viewportHeight="48.0" >
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:name="vector"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
     <path
+        android:name="path_1"
+        android:pathData="M 32.083 21.916 L 20.246 10.529 C 19.664 9.979 18.893 9.672 18.093 9.672 C 17.293 9.672 16.522 9.979 15.94 10.529 C 15.563 10.885 15.291 11.338 15.152 11.837 C 15.014 12.337 15.014 12.865 15.152 13.365 C 15.291 13.864 15.563 14.317 15.94 14.673 L 25.626 23.985 L 15.94 33.305 C 15.564 33.661 15.291 34.113 15.153 34.612 C 15.014 35.112 15.014 35.639 15.153 36.139 C 15.291 36.638 15.564 37.09 15.94 37.446 C 16.522 37.997 17.293 38.304 18.094 38.304 C 18.895 38.304 19.666 37.997 20.248 37.446 L 32.083 26.06 C 32.46 25.704 32.733 25.251 32.872 24.752 C 33.011 24.252 33.011 23.724 32.872 23.224 C 32.733 22.725 32.46 22.272 32.083 21.916 Z"
         android:fillColor="?android:attr/colorControlNormal"
-        android:pathData="M38.0,26.0L26.0,26.0l0.0,12.0l-4.0,0.0L22.0,26.0L10.0,26.0l0.0,-4.0l12.0,0.0L22.0,10.0l4.0,0.0l0.0,12.0l12.0,0.0l0.0,4.0z" />
+        android:fillType="evenOdd"/>
 </vector>
