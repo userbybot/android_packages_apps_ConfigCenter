@@ -43,7 +43,7 @@
     <string name="downloads_title">Downloads</string>
     <string name="downloads_summary">Place where you will find newest builds for all officially supported devices</string>
     <string name="telegram_channel">News channel</string>
-    <string name="telegram_channel_summary">Telegram channel where you will find changelogs, new features and general news about the rom</string>
+    <string name="telegram_channel_summary">Telegram channel where you will find changelogs, new features and general news about the EOM</string>
     <string name="telegram_chat">Support chat</string>
     <string name="telegram_chat_summary">Telegram chat where we provide support for this rom</string>
     <string name="donation_link">Donations</string>
@@ -142,7 +142,7 @@
 
     <!-- FOD icon picker -->
     <string name="fod_icon_picker_title">FOD icon picker</string>
-    <string name="fod_icon_picker_summary">Pick your favourite fingerprint icon</string>
+    <string name="fod_icon_picker_summary">Pick your favourite FOD icon</string>
 
     <!-- FOD icon use wallpaper color -->
     <string name="fod_wallpaper_color">Use wallpaper color for FOD icon</string>
@@ -154,13 +154,13 @@
 
     <!-- screen off FOD -->
     <string name="scr_off_fod">Screen off FOD</string>
-    <string name="scr_off_fod_summary">Use fingerprint reader also while screen is off</string>
+    <string name="scr_off_fod_summary">Use FOD while screen is off</string>
 
     <string name="enable_oneui">OneUI</string>
-    <string name="enable_oneui_summary">Show spacer above settings actionbar for easier use with one hand\nNOTE: restart settings app to see effect</string>
+    <string name="enable_oneui_summary">Show spacer above settings actionbar for easier use with one hand\nNOTE: Restart settings app to see effect</string>
 
     <string name="settings_suggestions">Dashboard suggestions</string>
-    <string name="settings_suggestions_summary">Enable aosp settings suggestions on main settings page\nNOTE: restart settings app to see effect</string>
+    <string name="settings_suggestions_summary">Enable AOSP settings suggestions on main settings page\nNOTE: Restart settings app to see effect</string>
 
     <!-- Fingerprint authentication vibration -->
     <string name="fprint_sucess_vib_title">Fingerprint authentication vibration</string>
@@ -172,9 +172,9 @@
     <string name="enable_clear_all_button">Replace clear all text with nice button</string>
     <string name="enable_clear_all_button_summary">Show clear all notifications button in quick settings instead of default text one</string>
     <string name="blur_quicksettings">Blur behind quick settings</string>
-    <string name="blur_quicksettings_subtitle">blurs darkened background behind quick settings</string>
-    <string name="qs_datausage_title">Show data usage in qs header</string>
-    <string name="qs_datausage_subtitle">Shows data usage in quick settings header of sim used for data</string>
+    <string name="blur_quicksettings_subtitle">Blurs darkened background behind quick settings</string>
+    <string name="qs_datausage_title">Show data usage in QS header</string>
+    <string name="qs_datausage_subtitle">Shows data usage in quick settings header of SIM used for data</string>
 
     <!-- Per App aspect Ratio -->
     <string name="action_save">Save</string>
@@ -239,10 +239,10 @@
     <string name="torch_power_button_gesture_lp">Long press power button to enable torch</string>
 
     <string name="brightness_slider_qs_unexpanded">MIUI style brightness slider (beta)</string>
-    <string name="brightness_slider_qs_unexpanded_summary">Shows brightness slider below qs panel</string>
+    <string name="brightness_slider_qs_unexpanded_summary">Shows brightness slider below QS panel</string>
 
-    <string name="qs_bg_use_new_tint">ExtendedUI qs tile colors</string>
-    <string name="qs_bg_use_new_tint_summary">Use accent color for qs tile icons and background</string>
+    <string name="qs_bg_use_new_tint">Tint the QS tiles</string>
+    <string name="qs_bg_use_new_tint_summary">Use accent color for QS tile icons and background</string>
 
     <!-- R Notification headers -->
     <string name="notification_headers_title">Show notification headers</string>
