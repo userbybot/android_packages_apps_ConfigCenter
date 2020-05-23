@@ -37,6 +37,7 @@
     <string name="general_system_stuff_preference">System Behaviour</string>
     <string name="ambient_display_tuner">Ambient Display</string>
     <string name="misc_category">Miscellaneous</string>
+    <string name="themer_category">Theme Engine</string>
 
     <!-- About section -->
     <string name="downloads_title">Downloads</string>
