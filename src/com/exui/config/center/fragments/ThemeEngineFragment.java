@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 ExtendedUI
+ * Copyright (C) 2020 ShapeShiftOS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,32 +15,38 @@
  */
 package com.exui.config.center.fragments;
 
-import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
 import android.os.SystemProperties;
-import android.provider.Settings;
 import androidx.preference.*;
 
-import com.android.internal.logging.nano.MetricsProto; 
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+
+import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
+import com.android.settings.dashboard.DashboardFragment;
+import com.android.settings.display.OverlayCategoryPreferenceController;
+import com.android.settingslib.core.AbstractPreferenceController;
+import com.android.settingslib.core.lifecycle.Lifecycle;
 
 import com.android.settings.R;
-import com.android.settings.SettingsPreferenceFragment;
 
-public class ThemeEngineFragment extends SettingsPreferenceFragment
-        implements Preference.OnPreferenceChangeListener {
+import java.util.ArrayList;
+import java.util.List;
 
-    public static final String TAG = "ThemeEngineFragment";
+public class ThemeEngine extends DashboardFragment {
+    private static final String TAG = "ThemeEngineFragment";
 
     private ContentResolver mResolver;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.config_center_themer_category);
+    public int getMetricsCategory() {
+        return MetricsEvent.CUSTOM_SETTINGS;
+    }
 
+    @Override
+    protected String getLogTag() {
+        return TAG;
     }
 
     @Override
@@ -49,7 +55,28 @@ public class ThemeEngineFragment extends SettingsPreferenceFragment
     }
 
     @Override
-    public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.CUSTOM_SETTINGS;
+    protected int getPreferenceScreenResId() {
+        return R.xml.config_center_themer_category;
+    }
+
+    @Override
+    protected List<AbstractPreferenceController> createPreferenceControllers(Context context) {
+        return buildPreferenceControllers(context, getSettingsLifecycle(), this);
+    }
+
+    private static List<AbstractPreferenceController> buildPreferenceControllers(
+            Context context, Lifecycle lifecycle, Fragment fragment) {
+        final List<AbstractPreferenceController> controllers = new ArrayList<>();
+        controllers.add(new OverlayCategoryPreferenceController(context,
+                "android.theme.customization.accent_color"));
+        controllers.add(new OverlayCategoryPreferenceController(context,
+                "android.theme.customization.font"));
+        controllers.add(new OverlayCategoryPreferenceController(context,
+                "android.theme.customization.adaptive_icon_shape"));
+        controllers.add(new OverlayCategoryPreferenceController(context,
+                "android.theme.customization.icon_pack.android"));
+        controllers.add(new OverlayCategoryPreferenceController(context,
+                "android.theme.customization.primary_color"));
+        return controllers;
     }
 } 
