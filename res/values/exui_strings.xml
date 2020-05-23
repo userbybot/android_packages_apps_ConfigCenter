@@ -261,5 +261,11 @@
     <string name="pulse_on_new_tracks_title">Ambient music ticker</string>
     <string name="pulse_on_new_tracks_summary">Show Ambient Display when a new music track is played</string>
      
-
+    <!-- Theme Engine -->     
+    <string name="theme_customization_accent_color_title">Accent Color Picker</string>
+    <string name="theme_customization_primary_color_title">Primary Color Picker</string>
+    <string name="theme_customization_font_title">Font Picker</string>
+    <string name="theme_customization_icon_shape_title">Adaptive Icon Picker</string>
+    <string name="theme_customization_sysui_icon_title">Statusbar Icon Picker</string>    
+     
 </resources>
