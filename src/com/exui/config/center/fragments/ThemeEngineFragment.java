@@ -34,7 +34,7 @@ import com.android.settings.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ThemeEngine extends DashboardFragment {
+public class ThemeEngineFragment extends DashboardFragment {
     private static final String TAG = "ThemeEngineFragment";
 
     private ContentResolver mResolver;
@@ -47,11 +47,6 @@ public class ThemeEngine extends DashboardFragment {
     @Override
     protected String getLogTag() {
         return TAG;
-    }
-
-    @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        return false;
     }
 
     @Override
