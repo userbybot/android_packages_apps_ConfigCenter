@@ -18,17 +18,27 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <PreferenceCategory
+        android:key="lights_notifications_subcat"
+        android:title="@string/lights_notifications_subcat">  
+
     <Preference
         android:key="ambient_light_settings"
         android:title="@string/ambient_light_settings_title"
         android:summary="@string/pulse_ambient_light_summary"
         android:fragment="com.exui.config.center.fragments.AmbientLight" />
 
-    <com.exui.config.center.preferences.SystemSettingSwitchPreference
-        android:key="hide_smart_replies"
-        android:title="@string/hide_smart_replies_title"
-        android:summary="@string/hide_smart_replies_summary"
-        android:defaultValue="false"/>
+    <Preference
+        android:key="charging_light"
+        android:title="@string/battery_light_settings"
+        android:summary="@string/battery_light_summary"
+        android:fragment="com.exui.config.center.fragments.BatteryLightSettings" />
+
+    </PreferenceCategory>         
+
+    <PreferenceCategory
+        android:key="heads_notifications_subcat"
+        android:title="@string/heads_notifications_subcat">  
 
     <ListPreference
         android:key="heads_up_time_out"
@@ -44,16 +54,24 @@
         android:entryValues="@array/heads_up_snooze_values"
         android:persistent="false" />
 
+    </PreferenceCategory>         
+
+    <PreferenceCategory
+        android:key="misc_notifications_subcat"
+        android:title="@string/misc_notifications_subcat">    
+
     <com.exui.config.center.preferences.SystemSettingSwitchPreference
         android:key="notification_sound_vib_screen_on"
         android:title="@string/notification_sound_vib_screen_on_title"
         android:summary="@string/notification_sound_vib_screen_on_summary"
         android:defaultValue="true" />
 
-    <Preference
-        android:key="charging_light"
-        android:title="@string/battery_light_settings"
-        android:summary="@string/battery_light_summary"
-        android:fragment="com.exui.config.center.fragments.BatteryLightSettings" />
+    <com.exui.config.center.preferences.SystemSettingSwitchPreference
+        android:key="hide_smart_replies"
+        android:title="@string/hide_smart_replies_title"
+        android:summary="@string/hide_smart_replies_summary"
+        android:defaultValue="false"/>
+
+    </PreferenceCategory>         
 
 </PreferenceScreen>

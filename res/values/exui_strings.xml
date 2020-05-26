@@ -51,6 +51,9 @@
     <string name="ambient_display_tuner">Ambient Display</string>
     <string name="misc_category">Miscellaneous</string>
     <string name="themer_category">Theme Engine</string>
+    <string name="misc_notifications_subcat">Miscellaneous</string>
+    <string name="heads_notifications_subcat">Heads Up</string>
+    <string name="lights_notifications_subcat">Lights</string>
 
     <!-- About section -->
     <string name="downloads_title">Downloads</string>
