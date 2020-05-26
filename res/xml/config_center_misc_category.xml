@@ -25,6 +25,12 @@
             android:summary="@string/smart_pixels_summary"
             android:fragment="com.exui.config.center.external.SmartPixels" />
 
+        <com.exui.config.center.preferences.SystemSettingSwitchPreference
+            android:key="pocket_judge"
+            android:title="@string/pocket_judge_title"
+            android:summary="@string/pocket_judge_summary"
+            android:defaultValue="false" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
