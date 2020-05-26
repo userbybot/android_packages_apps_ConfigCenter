@@ -28,7 +28,7 @@
             android:icon="@drawable/website_icon">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://sourceforge.net/projects/extendedreborn/files/"/>
+                android:data="https://sourceforge.net/projects/shapeshiftos/files/"/>
         </Preference>         
 
         <Preference
