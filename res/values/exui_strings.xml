@@ -48,7 +48,6 @@
     <string name="devs_category">Devs</string>
     <string name="maintainers_category">Maintainers</string>
     <string name="general_system_stuff_preference">System Behaviour</string>
-    <string name="ambient_display_tuner">Ambient Display</string>
     <string name="misc_category">Miscellaneous</string>
     <string name="themer_category">Theme Engine</string>
     <string name="misc_notifications_subcat">Miscellaneous</string>
@@ -272,10 +271,5 @@
     <string name="qs_rows_landscape_title">Tiles rows on landscape</string>
     <string name="qs_columns_portrait_title">Tiles columns on portrait</string>
     <string name="qs_columns_landscape_title">Tiles columns on landscape</string>
-     
-    <!-- Ambient music ticker pulse -->
-    <string name="pulse_on_new_tracks_title">Ambient music ticker</string>
-    <string name="pulse_on_new_tracks_summary">Show Ambient Display when a new music track is played</string>
-     
 
 </resources>
