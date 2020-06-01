@@ -26,6 +26,44 @@
         <item>space;space;left,back,home,recent,right</item>
     </string-array>
 
+    <!-- Network Traffic Type -->
+    <string-array name="show_network_traffic_type_entries" translatable="false">
+        <item>@string/show_network_traffic_combined</item>
+        <item>@string/show_network_traffic_dynamic</item>
+        <item>@string/show_network_traffic_up</item>
+        <item>@string/show_network_traffic_down</item>
+        <item>@string/show_network_traffic_all</item>
+    </string-array>
+    <string-array name="show_network_traffic_type_values" translatable="false">
+        <item>3</item>
+        <item>4</item>
+        <item>1</item>
+        <item>2</item>
+        <item>0</item>
+    </string-array>
+
+    <!-- Network Traffic Layout -->
+    <string-array name="network_traffic_layout_entries" translatable="false">
+        <item>@string/network_traffic_layout_h</item>
+        <item>@string/network_traffic_layout_v</item>
+    </string-array>
+    <string-array name="network_traffic_layout_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <!-- Network traffic location -->
+    <string-array name="network_traffic_location_entries">
+        <item>@string/traffic_disabled</item>
+        <item>@string/traffic_statusbar</item>
+        <item>@string/traffic_expanded_statusbar</item>
+    </string-array>
+    <string-array name="network_traffic_location_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
     <!-- Smart Pixels -->
     <string-array name="smart_pixels_percent_strings" translatable="false">
         <item>12</item>
@@ -109,19 +147,6 @@
         <item>1200000</item>
     </string-array>
 
-    <!-- Network Traffic Type -->
-    <string-array name="show_network_traffic_type_entries" translatable="false">
-        <item>@string/show_network_traffic_up</item>
-        <item>@string/show_network_traffic_down</item>
-        <item>@string/show_network_traffic_all</item>
-    </string-array>
-
-    <string-array name="show_network_traffic_type_values" translatable="false">
-        <item>1</item>
-        <item>2</item>
-        <item>0</item>
-    </string-array>
-
     <!-- Torch Power button gestures -->
     <string-array name="torch_power_button_gesture_entries">
         <item>@string/torch_power_button_gesture_none</item>
@@ -130,6 +155,25 @@
      <string-array name="torch_power_button_gesture_values" translatable="false">
         <item>0</item>
         <item>2</item>
+    </string-array>
+
+   <!-- VoLTE Icon Type -->
+    <string-array name="volte_icon_type_entries" translatable="false">
+        <item>@string/volte_icon_miui</item>
+        <item>@string/volte_icon_hd</item>
+        <item>@string/volte_icon_oos</item>
+        <item>@string/volte_icon_volte</item>
+        <item>@string/volte_icon_vo</item>
+        <item>@string/status_bar_volte_style_5</item>
+    </string-array>
+
+    <string-array name="volte_icon_type_values" translatable="false">
+        <item>5</item>
+        <item>4</item>
+        <item>3</item>
+        <item>2</item>
+        <item>1</item>
+        <item>0</item>
     </string-array>
 
 </resources>
