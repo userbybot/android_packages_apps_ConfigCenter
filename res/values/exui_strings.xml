@@ -22,6 +22,15 @@
     <string name="navigation_category">Navigation &amp; Buttons</string>
     <string name="about_category">About</string>
 
+    <!-- Smart pulldown-->
+    <string name="smart_pulldown_title">Smart pulldown</string>
+    <string name="smart_pulldown_summary">Open quick settings when there are %1$s notifications</string>
+    <string name="smart_pulldown_none_summary">Open quick settings when there are no notifications</string>
+    <string name="smart_pulldown_off">Off</string>
+    <string name="smart_pulldown_none">no notifications</string>
+    <string name="smart_pulldown_dismissable">no dismissable</string>
+    <string name="smart_pulldown_ongoing">no ongoing</string>
+
     <!-- Network Traffic -->
     <string name="statusbar_trafficat">Network Traffic</string>
     <string name="trafficat">Network Traffic Indicators</string>

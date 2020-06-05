@@ -26,6 +26,21 @@
         <item>space;space;left,back,home,recent,right</item>
     </string-array>
 
+    <!-- Smart pulldown -->
+    <string-array name="smart_pulldown_entries" translatable="false">
+        <item>@string/smart_pulldown_off</item>
+        <item>@string/smart_pulldown_dismissable</item>
+        <item>@string/smart_pulldown_ongoing</item>
+        <item>@string/smart_pulldown_none</item>
+    </string-array>
+
+    <string-array name="smart_pulldown_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
     <!-- Network Traffic Type -->
     <string-array name="show_network_traffic_type_entries" translatable="false">
         <item>@string/show_network_traffic_combined</item>
