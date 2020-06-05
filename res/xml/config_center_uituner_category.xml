@@ -135,6 +135,11 @@
         android:key="interface_category"
         android:title="@string/interface_category">
 
+        <Preference
+            android:key="themer_category"
+            android:fragment="com.exui.config.center.fragments.ThemeEngineFragment"
+            android:title="@string/themer_category" />
+
         <com.exui.config.center.preferences.SystemSettingSwitchPreference
             android:key="settings_suggestion_cards"
             android:title="@string/settings_suggestions"

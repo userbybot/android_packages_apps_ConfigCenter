@@ -37,13 +37,6 @@
         android:icon="@drawable/uituner_category_icon" />
 
     <Preference
-        android:key="themer_category"
-        android:fragment="com.exui.config.center.fragments.ThemeEngineFragment"
-        android:title="@string/themer_category"
-        android:icon="@drawable/themer_category_icon" />
-
-
-    <Preference
         android:key="notifications_category"
         android:fragment="com.exui.config.center.fragments.NotificationsFragment"
         android:title="@string/notifications_category"
