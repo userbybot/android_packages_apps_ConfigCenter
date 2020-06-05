@@ -54,7 +54,7 @@
     <string name="volte_icon_volte">VoLTE Icon</string>
     <string name="volte_icon_oos">VoLTE OOS Icon</string>
     <string name="volte_icon_hd">HD Icon</string>
-    <string name="volte_icon_miui">VoLTE Miui Icon</string>
+    <string name="volte_icon_miui">VoLTE MIUI Icon</string>
     <string name="status_bar_volte_style_5">VoLTE Asus Icon</string>
 
     <!-- 4G icon -->
@@ -93,6 +93,7 @@
     <string name="misc_notifications_subcat">Miscellaneous</string>
     <string name="heads_notifications_subcat">Heads Up</string>
     <string name="lights_notifications_subcat">Lights</string>
+    <string name="general_controlization">General</string>
 
     <!-- About section -->
     <string name="downloads_title">Downloads</string>
