@@ -90,6 +90,11 @@
             android:summary="Xiaomi Mi A3 Maintainer">
         </Preference>        
 
+         <Preference
+            android:title="Eduardo H"
+            android:summary="OnePlus 6 Maintainer">
+        </Preference>
+
     </PreferenceCategory>
 
 </PreferenceScreen>
