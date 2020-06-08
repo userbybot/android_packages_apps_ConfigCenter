@@ -17,10 +17,12 @@ package com.exui.config.center.fragments;
 
 import android.app.Activity;
 import android.content.ContentResolver;
+import android.content.res.Resources;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemProperties;
+import android.os.UserHandle;
 import android.provider.Settings;
 import androidx.preference.*;
 
@@ -35,7 +37,7 @@ public class StatusBarFragment extends SettingsPreferenceFragment
     public static final String TAG = "StatusBarFragment";
     private static final String PREF_SMART_PULLDOWN = "smart_pulldown";
 
-    private ContentResolver mResolver;
+    private ContentResolver resolver;
 
     private ListPreference mSmartPulldown;
     private ListPreference mQuickPulldown;
