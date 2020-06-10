@@ -84,16 +84,21 @@
             android:title="AshutoshSundresh"
             android:summary="OnePlus 6T Maintainer">
         </Preference>
-         
+
+         <Preference
+            android:title="EduardoH"
+            android:summary="OnePlus 6 Maintainer">
+        </Preference>
+
          <Preference
             android:title="MezzLasha"
             android:summary="Xiaomi Mi A3 Maintainer">
-        </Preference>        
+         </Preference>
 
          <Preference
-            android:title="Eduardo H"
-            android:summary="OnePlus 6 Maintainer">
-        </Preference>
+            android:title="MadeOfGreat"
+            android:summary="Pocophone F1 Maintainer">
+        </Preference>        
 
     </PreferenceCategory>
 
