@@ -97,7 +97,17 @@
 
          <Preference
             android:title="MadeOfGreat"
-            android:summary="Pocophone F1 Maintainer">
+            android:summary="Xiaomi Pocophone F1 Maintainer">
+        </Preference>        
+
+         <Preference
+            android:title="AshayKapadiya"
+            android:summary="Xiaomi Redmi Note 4/4X Maintainer">
+        </Preference>        
+
+         <Preference
+            android:title="MiDoNaSR"
+            android:summary="Xiaomi Redmi S2 Maintainer">
         </Preference>        
 
     </PreferenceCategory>
