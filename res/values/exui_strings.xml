@@ -31,6 +31,13 @@
     <string name="smart_pulldown_dismissable">no dismissable</string>
     <string name="smart_pulldown_ongoing">no ongoing</string>
 
+    <!-- Settings dashboard icon style -->
+    <string name="theming_settings_dashboard_icons_title">Settings dashboard icons</string>
+    <string name="theming_settings_dashboard_icons_default2">Default background</string>
+    <string name="theming_settings_dashboard_icons_default_accent2">Accent background</string>
+    <string name="theming_settings_dashboard_icons_plain">Plain</string>
+    <string name="theming_settings_dashboard_icons_plain_accent">Plain accent</string>
+
     <!-- Quick QS pulldown -->
     <string name="status_bar_quick_qs_pulldown">Quick QS pulldown</string>
     <string name="quick_pulldown_none">Disabled</string>
