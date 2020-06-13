@@ -134,6 +134,7 @@ public class UITunerFragment extends SettingsPreferenceFragment
             return true;
         }
         if (preference == mQsBlurIntensity) {
+            Context mContext = getContext();
             int value = (Integer) newValue;
             Settings.System.putInt(mContext.getContentResolver(),
                     Settings.System.QS_BLUR_INTENSITY, value);
