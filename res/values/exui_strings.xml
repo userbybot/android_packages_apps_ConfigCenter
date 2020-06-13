@@ -85,6 +85,8 @@
     <string name="volte_icon_hd">HD Icon</string>
     <string name="volte_icon_miui">VoLTE MIUI Icon</string>
     <string name="status_bar_volte_style_5">VoLTE Asus Icon</string>
+    <string name="status_bar_volit">VoLit Icon</string>
+    <string name="status_bar_notchy">Notch-Friendly VoLTE Icon</string>
 
     <!-- 4G icon -->
     <string name="statusbar_items_category">Icons</string>
