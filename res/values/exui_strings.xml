@@ -246,6 +246,7 @@
     <string name="fod_recog_animation_op_mclaren">OP - McLaren</string>
     <string name="fod_recog_animation_pureview_future">PureView - Future</string>
     <string name="fod_recog_animation_pureview_molecular">PureView - Molecular</string>
+    <string name="fod_recog_animation_op_energy">OP8 - ENERGY</string>
 
     <!-- screen off FOD -->
     <string name="scr_off_fod">Screen off FOD</string>
