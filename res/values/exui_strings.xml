@@ -289,6 +289,9 @@
     <string name="media_art_title">Media artwork</string>
     <string name="media_art_summary">Show media cover art as the lockscreen background</string>
 
+    <string name="qs_blur_alpha_title">Blur alpha</string>
+    <string name="qs_blur_alpha_summary">Sets the blur transparency</string>
+
     <!-- Torch Power button gestures -->
     <string name="torch_power_button_gesture_title">Screen off torch</string>
     <string name="torch_power_button_gesture_none">Disabled</string>
