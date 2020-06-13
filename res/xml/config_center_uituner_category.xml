@@ -37,13 +37,13 @@
             android:defaultValue="false" />
 
         <!-- FOD recognizing animation -->
-            <com.exui.config.center.preference.SystemSettingSwitchPreference
+            <com.exui.config.center.preferences.SystemSettingSwitchPreference
                 android:key="fod_recognizing_animation"
                 android:title="@string/fod_recog_animation"
                 android:summary="@string/fod_recog_animation_summary"
                 android:defaultValue="false" />
 
-            <com.exui.config.center.preference.SystemSettingIntListPreference
+            <com.exui.config.center.preferences.SystemSettingIntListPreference
                 android:key="fod_anim"
                 android:title="@string/fod_recog_animation_picker_title"
                 android:entries="@array/fod_recog_animation_entries"
@@ -168,7 +168,7 @@
             android:fragment="com.exui.config.center.fragments.ThemeEngineFragment"
             android:title="@string/themer_category" />
 
-    <com.exui.config.center.preference.SystemSettingIntListPreference
+    <com.exui.config.center.preferences.SystemSettingIntListPreference
         android:key="theming_settings_dashboard_icons"
         android:title="@string/theming_settings_dashboard_icons_title"
         android:entries="@array/theming_settings_dashboard_icons_entries"
