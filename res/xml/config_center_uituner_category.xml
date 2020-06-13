@@ -162,6 +162,19 @@
             android:summary="@string/notification_headers_summary"
             android:defaultValue="true" />
 
+    <com.exui.config.center.preferences.SystemSettingSwitchPreference
+            android:key="blur_powermenu_background"
+            android:title="@string/blur_powermenu_title"
+            android:summary="@string/blur_powermenu_summary"
+            android:defaultValue="false" />
+
+    <com.exui.config.center.preferences.SystemSettingSeekBarPreference
+            android:key="powermenu_background_blur_intensity"
+            android:title="@string/blur_powermenu_intensity_title"
+            android:min="1"
+            android:max="100"
+            android:defaultValue="30" />
+
     </PreferenceCategory>
 
     <PreferenceCategory

@@ -37,6 +37,11 @@
     <string name="quick_pulldown_right">Pulldown statusbar from right side</string>
     <string name="quick_pulldown_left">Pulldown statusbar from left side</string>
 
+     <!-- Blur Power menu -->
+    <string name="blur_powermenu_intensity_title">Blur Intensity</string>
+    <string name="blur_powermenu_title">Blur Powermenu</string>
+    <string name="blur_powermenu_summary">Enable blur background on powermenu</string>
+
     <!-- Network Traffic -->
     <string name="statusbar_trafficat">Network Traffic</string>
     <string name="trafficat">Network Traffic Indicators</string>
