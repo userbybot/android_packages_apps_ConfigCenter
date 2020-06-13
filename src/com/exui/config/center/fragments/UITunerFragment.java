@@ -32,6 +32,7 @@ import com.android.settings.SettingsPreferenceFragment;
 
 import com.exui.config.center.preferences.AppMultiSelectListPreference;
 import com.exui.config.center.preferences.ScrollAppsViewPreference;
+import com.exui.config.center.preferences.SystemSettingSeekBarPreference;
 
 import java.util.Arrays;
 import java.util.ArrayList;
@@ -48,11 +49,13 @@ public class UITunerFragment extends SettingsPreferenceFragment
     private static final String KEY_ASPECT_RATIO_CATEGORY = "aspect_ratio_category";
     private static final String KEY_ASPECT_RATIO_APPS_LIST_SCROLLER = "aspect_ratio_apps_list_scroller";
     private static final String KEY_SCREEN_OFF_FOD = "screen_off_fod";
+    private static final String QS_BLUR_INTENSITY = "qs_blur_intensity";
 
     private ContentResolver mResolver;
     private AppMultiSelectListPreference mAspectRatioAppsSelect;
     private ScrollAppsViewPreference mAspectRatioApps;
     private SwitchPreference mScreenOffFOD;
+    private SystemSettingSeekBarPreference mQsBlurIntensity;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -60,6 +63,7 @@ public class UITunerFragment extends SettingsPreferenceFragment
         addPreferencesFromResource(R.xml.config_center_uituner_category);
 
         PreferenceScreen prefScreen = getPreferenceScreen();
+        Context mContext = getContext();
 
         mResolver = getActivity().getContentResolver();
 
@@ -98,6 +102,12 @@ public class UITunerFragment extends SettingsPreferenceFragment
         if (mScreenOffFOD != null) {
             mScreenOffFOD.setChecked(mScreenOffFODValue);
             mScreenOffFOD.setOnPreferenceChangeListener(this);
+
+        mQsBlurIntensity = (SystemSettingSeekBarPreference) findPreference(QS_BLUR_INTENSITY);
+        int qsBlurIntensity = Settings.System.getInt(mContext.getContentResolver(),
+                Settings.System.QS_BLUR_INTENSITY, 100);
+        mQsBlurIntensity.setValue(qsBlurIntensity);
+        mQsBlurIntensity.setOnPreferenceChangeListener(this);
         }
     }
 
@@ -121,6 +131,12 @@ public class UITunerFragment extends SettingsPreferenceFragment
             int mScreenOffFODValue = (Boolean) newValue ? 1 : 0;
             Settings.System.putInt(mResolver, Settings.System.SCREEN_OFF_FOD, mScreenOffFODValue);
             Settings.Secure.putInt(mResolver, Settings.Secure.DOZE_ALWAYS_ON, mScreenOffFODValue);
+            return true;
+        }
+        if (preference == mQsBlurIntensity) {
+            int value = (Integer) newValue;
+            Settings.System.putInt(mContext.getContentResolver(),
+                    Settings.System.QS_BLUR_INTENSITY, value);
             return true;
         }
         return false;

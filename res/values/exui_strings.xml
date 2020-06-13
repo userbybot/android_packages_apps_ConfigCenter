@@ -48,6 +48,8 @@
     <string name="blur_powermenu_intensity_title">Blur Intensity</string>
     <string name="blur_powermenu_title">Blur Powermenu</string>
     <string name="blur_powermenu_summary">Enable blur background on powermenu</string>
+    <string name="qs_blur_intensity_title">Blur intensity</string>
+    <string name="qs_blur_intensity_summary">Sets the blur intensity/radius</string>
 
     <!-- Network Traffic -->
     <string name="statusbar_trafficat">Network Traffic</string>
