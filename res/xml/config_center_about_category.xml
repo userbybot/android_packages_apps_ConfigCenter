@@ -110,6 +110,11 @@
             android:summary="Xiaomi Redmi S2 Maintainer">
         </Preference>        
 
+
+         <Preference
+            android:title="kalmin06"
+            android:summary="Xiaomi Redmi Note 7 Pro Maintainer">
+        </Preference>        
     </PreferenceCategory>
 
 </PreferenceScreen>
