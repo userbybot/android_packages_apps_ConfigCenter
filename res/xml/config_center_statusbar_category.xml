@@ -81,6 +81,12 @@
         android:summary="@string/trafficat_summary"
         android:fragment="com.exui.config.center.fragments.NetworkTraffic" />
 
+	<Preference
+	android:key="clock_settings"
+        android:title="@string/clock_style_category_title"
+        android:summary="@string/clock_style_category_summary"
+        android:fragment="com.exui.config.center.fragments.ClockSettings" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
