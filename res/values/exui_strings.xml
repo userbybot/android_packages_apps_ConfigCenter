@@ -22,6 +22,10 @@
     <string name="navigation_category">Navigation &amp; Buttons</string>
     <string name="about_category">About</string>
 
+    <string name="clock_date_right">Right of time</string>
+    <string name="clock_date_left">Left of time</string>
+    <string name="clock_date_position">Date position</string>
+
     <!-- Smart pulldown-->
     <string name="smart_pulldown_title">Smart pulldown</string>
     <string name="smart_pulldown_summary">Open quick settings when there are %1$s notifications</string>
