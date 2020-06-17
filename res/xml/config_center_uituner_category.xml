@@ -117,6 +117,7 @@
        android:max="100"
        settings:min="1"
        settings:units="%"
+       android:defaultValue="100"
        android:persistent="false"
        android:dependency="qs_blur" />
 
