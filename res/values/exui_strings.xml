@@ -29,6 +29,10 @@
     <string name="pocket_judge_fp_title">Allow FP in pocket mode</string>
     <string name="pocket_judge_fp_summary">Listen for fingerprint when pocket detection is active</string>
 
+    <!-- Heads up options -->
+    <string name="less_boring_heads_up_title">Less boring heads up</string>
+    <string name="less_boring_heads_up_summary">Show heads up only for dialer, messaging and alarm app</string>
+
     <!-- Smart pulldown-->
     <string name="smart_pulldown_title">Smart pulldown</string>
     <string name="smart_pulldown_summary">Open quick settings when there are %1$s notifications</string>
