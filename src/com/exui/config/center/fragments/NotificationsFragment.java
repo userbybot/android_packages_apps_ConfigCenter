@@ -25,6 +25,7 @@ import android.content.ContentResolver;
 import android.content.res.Resources;
 import android.hardware.fingerprint.FingerprintManager;
 import android.os.Bundle;
+import android.os.UserHandle;
 import android.view.Surface;
 import androidx.preference.SwitchPreference;
 import androidx.preference.ListPreference;
@@ -34,6 +35,7 @@ import androidx.preference.PreferenceScreen;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import android.provider.Settings;
+import com.android.settings.Utils;
 
 public class NotificationsFragment extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
@@ -41,7 +43,9 @@ public class NotificationsFragment extends SettingsPreferenceFragment
     public static final String TAG = "NotificationsFragment";
     private static final String PREF_HEADS_UP_TIME_OUT = "heads_up_time_out";
     private static final String PREF_HEADS_UP_SNOOZE_TIME = "heads_up_snooze_time";
+    private static final String FORCE_EXPANDED_NOTIFICATIONS = "force_expanded_notifications";
 
+    private SwitchPreference mForceExpanded;
     private ListPreference mHeadsUpTimeOut;
     private ListPreference mHeadsUpSnoozeTime;
     private Preference mChargingLeds;
@@ -79,6 +83,10 @@ public class NotificationsFragment extends SettingsPreferenceFragment
         mHeadsUpSnoozeTime.setValue(String.valueOf(headsUpSnooze));
         updateHeadsUpSnoozeTimeSummary(headsUpSnooze);
 
+        mForceExpanded = (SwitchPreference) findPreference(FORCE_EXPANDED_NOTIFICATIONS);
+        mForceExpanded.setChecked((Settings.System.getInt(getContentResolver(),
+                Settings.System.FORCE_EXPANDED_NOTIFICATIONS, 0) == 1));
+
         mChargingLeds = (Preference) findPreference("charging_light");
         if (mChargingLeds != null
                 && !getResources().getBoolean(
@@ -106,6 +114,7 @@ public class NotificationsFragment extends SettingsPreferenceFragment
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        final String key = preference.getKey();
         if (preference == mHeadsUpTimeOut) {
             int headsUpTimeOut = Integer.valueOf((String) newValue);
             Settings.System.putInt(getContentResolver(),
@@ -119,6 +128,11 @@ public class NotificationsFragment extends SettingsPreferenceFragment
                     Settings.System.HEADS_UP_NOTIFICATION_SNOOZE,
                     headsUpSnooze);
             updateHeadsUpSnoozeTimeSummary(headsUpSnooze);
+            return true;
+        } else if (preference == mForceExpanded) {
+            boolean checked = ((SwitchPreference)preference).isChecked();
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.FORCE_EXPANDED_NOTIFICATIONS, checked ? 1 : 0);
             return true;
         }
         return false;
