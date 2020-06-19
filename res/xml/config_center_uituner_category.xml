@@ -121,6 +121,15 @@
        android:persistent="false"
        android:dependency="qs_blur" />
 
+
+        <com.exui.config.center.preferences.CustomSeekBarPreference
+          android:key="qs_panel_alpha"
+          android:title="@string/qs_panel_alpha_title"
+          android:summary="@string/qs_panel_alpha_summary"
+          android:max="100"
+          settings:min="0"
+          android:persistent="false" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
