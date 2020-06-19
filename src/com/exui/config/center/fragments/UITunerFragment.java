@@ -30,9 +30,7 @@ import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-import com.exui.config.center.preferences.AppMultiSelectListPreference;
-import com.exui.config.center.preferences.ScrollAppsViewPreference;
-import com.exui.config.center.preferences.SystemSettingSeekBarPreference;
+import com.exui.config.center.preferences.*;
 
 import java.util.Arrays;
 import java.util.ArrayList;
