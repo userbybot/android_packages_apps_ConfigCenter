@@ -306,6 +306,7 @@
         <item>@string/fod_recog_animation_miui_pulse</item>
         <item>@string/fod_recog_animation_miui_pulse_white</item>
         <item>@string/fod_recog_animation_miui_rhythm</item>
+        <item>@string/fod_recog_animation_miui_aurora</item>
         <item>@string/fod_recog_animation_op_cosmos</item>
         <item>@string/fod_recog_animation_op_mclaren</item>
         <item>@string/fod_recog_animation_op_energy</item>
@@ -319,6 +320,8 @@
         <item>@string/fod_recog_animation_coloros7_1</item>
         <item>@string/fod_recog_animation_coloros7_2</item>
         <item>@string/fod_recog_animation_bluefirework</item>
+        <item>@string/fod_recog_animation_miui_whirlwind</item>
+        <item>@string/fod_recog_animation_miui_nebula</item>
     </string-array>
 
     <string-array name="fod_recog_animation_values" translatable="false">
@@ -329,6 +332,7 @@
         <item>4</item>
         <item>5</item>
         <item>6</item>
+        <item>20</item>
         <item>7</item>
         <item>8</item>
         <item>11</item>
@@ -342,6 +346,8 @@
         <item>18</item>
         <item>19</item>
         <item>12</item>
+        <item>21</item>
+        <item>22</item>
     </string-array>
 
 </resources>
