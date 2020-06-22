@@ -48,14 +48,12 @@ public class UITunerFragment extends SettingsPreferenceFragment
     private static final String KEY_ASPECT_RATIO_APPS_LIST_SCROLLER = "aspect_ratio_apps_list_scroller";
     private static final String KEY_SCREEN_OFF_FOD = "screen_off_fod";
     private static final String QS_BLUR_INTENSITY = "qs_blur_intensity";
-    private static final String KEY_QS_PANEL_ALPHA = "qs_panel_alpha";
 
     private ContentResolver mResolver;
     private AppMultiSelectListPreference mAspectRatioAppsSelect;
     private ScrollAppsViewPreference mAspectRatioApps;
     private SwitchPreference mScreenOffFOD;
     private SystemSettingSeekBarPreference mQsBlurIntensity;
-    private CustomSeekBarPreference mQsPanelAlpha;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -108,12 +106,6 @@ public class UITunerFragment extends SettingsPreferenceFragment
                 Settings.System.QS_BLUR_INTENSITY, 100);
         mQsBlurIntensity.setValue(qsBlurIntensity);
         mQsBlurIntensity.setOnPreferenceChangeListener(this);
-
-        mQsPanelAlpha = (CustomSeekBarPreference) findPreference(KEY_QS_PANEL_ALPHA);
-        int qsPanelAlpha = Settings.System.getInt(getContentResolver(),
-                Settings.System.QS_PANEL_BG_ALPHA, 221);
-        mQsPanelAlpha.setValue((int)(((double) qsPanelAlpha / 255) * 100));
-        mQsPanelAlpha.setOnPreferenceChangeListener(this);
         }
     }
 
@@ -144,13 +136,6 @@ public class UITunerFragment extends SettingsPreferenceFragment
             int value = (Integer) newValue;
             Settings.System.putInt(mContext.getContentResolver(),
                     Settings.System.QS_BLUR_INTENSITY, value);
-            return true;
-        }
-        if (preference == mQsPanelAlpha) {
-            int bgAlpha = (Integer) newValue;
-            int trueValue = (int) (((double) bgAlpha / 100) * 255);
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.QS_PANEL_BG_ALPHA, trueValue);
             return true;
         }
         return false;
