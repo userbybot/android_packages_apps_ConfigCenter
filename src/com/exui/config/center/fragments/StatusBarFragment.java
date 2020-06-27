@@ -42,7 +42,7 @@ public class StatusBarFragment extends SettingsPreferenceFragment
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.config_center_statusbar_category);
-
+        setRetainInstance(true);
     }
 
     @Override

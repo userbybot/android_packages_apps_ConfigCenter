@@ -40,7 +40,7 @@ public class AboutFragment extends SettingsPreferenceFragment
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.config_center_about_category);
-
+        setRetainInstance(true);
     }
 
     @Override

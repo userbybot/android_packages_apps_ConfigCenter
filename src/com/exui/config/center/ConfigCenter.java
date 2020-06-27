@@ -25,6 +25,7 @@ import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import androidx.core.content.ContextCompat;
 import android.hardware.fingerprint.FingerprintManager;
 import android.os.Bundle;
 import android.view.Surface;
@@ -36,9 +37,82 @@ import androidx.preference.PreferenceScreen;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import android.provider.Settings;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.bottomnavigation.LabelVisibilityMode;
+
+import com.exui.config.center.fragments.UITunerFragment;
+import com.exui.config.center.fragments.StatusBarFragment;
+import com.exui.config.center.fragments.MiscFragment;
+import com.exui.config.center.fragments.NavigationFragment;
+import com.exui.config.center.fragments.AboutFragment;
+import com.exui.config.center.fragments.LockscreenFragment;
 
 public class ConfigCenter extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        Resources res = getResources();
+        Window win = getActivity().getWindow();
+
+        win.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        win.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+        win.setNavigationBarColor(res.getColor(R.color.bottombar_bg));
+        win.setNavigationBarDividerColor(res.getColor(R.color.bottombar_bg));
+
+        View view = inflater.inflate(R.layout.layout_config, container, false);
+
+        final BottomNavigationView bottomNavigation = (BottomNavigationView) view.findViewById(R.id.bottom_navigation);
+
+    bottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+        @Override
+	  public boolean onNavigationItemSelected(MenuItem item) {
+
+             if (item.getItemId() == bottomNavigation.getSelectedItemId()) {
+
+               return false;
+
+             } else {
+
+		switch(item.getItemId()){
+                case R.id.statusbar_category:
+                switchFrag(new StatusBarFragment());
+                break;
+                case R.id.navigation_category:
+                switchFrag(new NavigationFragment());
+                break;
+                case R.id.uituner_category:
+                switchFrag(new UITunerFragment());
+                break;
+                case R.id.lockscreen_category:
+                switchFrag(new LockscreenFragment());
+                break;
+                case R.id.misc_category:
+                switchFrag(new MiscFragment());
+                break;
+                case R.id.about_category:
+                switchFrag(new AboutFragment());
+                break;
+               }
+            return true;
+            }
+	 }
+    });
+
+
+        setHasOptionsMenu(true);
+        bottomNavigation.setSelectedItemId(R.id.statusbar_category);
+        switchFrag(new StatusBar());
+        bottomNavigation.setLabelVisibilityMode(LabelVisibilityMode.LABEL_VISIBILITY_AUTO);
+        return view;
+    }
+
+    private void switchFrag(Fragment fragment) {
+        getFragmentManager().beginTransaction().replace(R.id.fragment_frame, fragment).commit();
+    }
+
+
 
     @Override
     public void onCreate(Bundle icicle) {

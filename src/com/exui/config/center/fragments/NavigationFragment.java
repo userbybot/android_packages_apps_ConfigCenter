@@ -47,6 +47,7 @@ public class NavigationFragment extends SettingsPreferenceFragment
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.config_center_navigation_category);
+        setRetainInstance(true);
 
         mResolver = getActivity().getContentResolver();
 
