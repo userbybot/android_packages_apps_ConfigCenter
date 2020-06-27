@@ -38,6 +38,11 @@
         android:defaultValue="false"
         android:dependency="pocket_judge" />
 
+   <Preference
+        android:key="audio_panel" 
+        android:fragment="com.exui.config.center.fragments.AudioPanelSettings"
+        android:title="@string/audio_panel_view" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
