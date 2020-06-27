@@ -194,6 +194,13 @@
             android:summary="@string/notification_headers_summary"
             android:defaultValue="true" />
 
+        <com.exui.config.center.preferences.SystemSettingSwitchPreference
+            android:key="synthos_center_notification_headers"
+            android:title="@string/synthos_center_notification_headers_title"
+            android:summary="@string/synthos_center_notification_headers_summary"
+            android:dependency="notification_headers"
+            android:defaultValue="true" />
+
     <com.exui.config.center.preferences.SystemSettingSwitchPreference
             android:key="blur_powermenu_background"
             android:title="@string/blur_powermenu_title"
