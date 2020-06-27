@@ -14,6 +14,11 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+
+    <!-- Volume panel Hide Things-->
+    <string name="synthos_hide_things_volumepanel_title">Hide Things below volume panel</string>
+    <string name="synthos_hide_things_volumepanel_summary">Hide Settings and Ringer Container below volume panel</string>
+
     <!-- Categories -->
     <string name="statusbar_category">Status bar</string>
     <string name="lockscreen_category">Lockscreen</string>
