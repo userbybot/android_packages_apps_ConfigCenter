@@ -29,6 +29,15 @@ import androidx.core.content.ContextCompat;
 import android.hardware.fingerprint.FingerprintManager;
 import android.os.Bundle;
 import android.view.Surface;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.Window;
+import android.view.WindowManager;
+import androidx.fragment.app.Fragment;
 import androidx.preference.SwitchPreference;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
@@ -103,7 +112,7 @@ public class ConfigCenter extends SettingsPreferenceFragment
 
         setHasOptionsMenu(true);
         bottomNavigation.setSelectedItemId(R.id.statusbar_category);
-        switchFrag(new StatusBar());
+        switchFrag(new StatusBarFragment());
         bottomNavigation.setLabelVisibilityMode(LabelVisibilityMode.LABEL_VISIBILITY_AUTO);
         return view;
     }
@@ -117,7 +126,7 @@ public class ConfigCenter extends SettingsPreferenceFragment
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        addPreferencesFromResource(R.xml.config_center);
+        setRetainInstance(true);
     }
 
     @Override
