@@ -72,4 +72,15 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="about_subcat_misc"
+        android:title="@string/about_category">
+
+    <Preference
+        android:key="about_category"
+        android:fragment="com.exui.config.center.fragments.AboutFragment"
+        android:title="@string/about_category" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen> 

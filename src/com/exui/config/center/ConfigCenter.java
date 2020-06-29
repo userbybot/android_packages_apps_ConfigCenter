@@ -53,7 +53,6 @@ import com.exui.config.center.fragments.UITunerFragment;
 import com.exui.config.center.fragments.StatusBarFragment;
 import com.exui.config.center.fragments.MiscFragment;
 import com.exui.config.center.fragments.NavigationFragment;
-import com.exui.config.center.fragments.AboutFragment;
 import com.exui.config.center.fragments.LockscreenFragment;
 
 public class ConfigCenter extends SettingsPreferenceFragment
@@ -99,9 +98,6 @@ public class ConfigCenter extends SettingsPreferenceFragment
                 break;
                 case R.id.misc_category:
                 switchFrag(new MiscFragment());
-                break;
-                case R.id.about_category:
-                switchFrag(new AboutFragment());
                 break;
                }
             return true;

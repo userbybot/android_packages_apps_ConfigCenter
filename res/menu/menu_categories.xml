@@ -26,9 +26,4 @@
             android:icon="@drawable/misc_category_icon"
             android:title="@string/misc_category" />                                            
 
-    <item
-            android:id="@+id/about_category"
-            android:icon="@drawable/information_category_icon"
-            android:title="@string/about_category" />
-
 </menu>
