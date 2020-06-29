@@ -421,7 +421,4 @@
     <string name="audio_panel_view_voice_title">Voice</string>
     <string name="audio_panel_view_bt_sco_title">Bluetooth</string>
 
-    <string name="synthos_music_volume_panel_text_title">Music Text</string>
-    <string name="synthos_music_volume_panel_text_summary">Show Music Text in left of VolumePanel</string>
-
 </resources>
