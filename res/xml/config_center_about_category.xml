@@ -118,7 +118,13 @@
           <Preference
             android:title="1cecreamm"
             android:summary="Xiaomi Mi 8 Lite Maintainer">
-        </Preference>                
+        </Preference>  
+
+          <Preference
+            android:title="ZennaApr"
+            android:summary="Xiaomi Redmi 5A Maintainer">
+        </Preference>  
+              
     </PreferenceCategory>
 
 </PreferenceScreen>
