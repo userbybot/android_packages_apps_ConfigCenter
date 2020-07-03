@@ -15,8 +15,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Volume panel Hide Things-->
-    <string name="synthos_hide_things_volumepanel_title">Hide Things below volume panel</string>
-    <string name="synthos_hide_things_volumepanel_summary">Hide Settings and Ringer Container below volume panel</string>
+    <string name="synthos_hide_ringer_volumepanel_title">Hide Ringer below volume panel</string>
+    <string name="synthos_hide_ringer_volumepanel_summary">Hide Ringer Container below volume panel</string>
+    <string name="synthos_hide_extended_volumepanel_title">Hide Extended below volume panel</string>
+    <string name="synthos_hide_extended_volumepanel_summary">Hide Extended Container below volume panel</string>
 
     <!-- VoWiFi icon -->
     <string name="vowifi_icon_title">VoWiFi icon</string>
@@ -41,6 +43,7 @@
     <string name="clock_date_right">Right of time</string>
     <string name="clock_date_left">Left of time</string>
     <string name="clock_date_position">Date position</string>
+    <string name="uituner_blur">Blur</string>
 
     <string name="pocket_judge_fp_title">Allow FP in pocket mode</string>
     <string name="pocket_judge_fp_summary">Listen for fingerprint when pocket detection is active</string>

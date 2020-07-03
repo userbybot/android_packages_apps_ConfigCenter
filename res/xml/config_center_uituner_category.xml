@@ -93,11 +93,23 @@
             android:summary="@string/qs_datausage_subtitle"
             android:defaultValue="false" />
 
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="uituner_blur"
+        android:title="@string/uituner_blur">
+
         <com.exui.config.center.preferences.SystemSettingSwitchPreference
             android:key="qs_blur"
             android:title="@string/blur_quicksettings"
             android:summary="@string/blur_quicksettings_subtitle"
             android:defaultValue="true" />
+
+    <com.exui.config.center.preferences.SystemSettingSwitchPreference
+            android:key="blur_powermenu_background"
+            android:title="@string/blur_powermenu_title"
+            android:summary="@string/blur_powermenu_summary"
+            android:defaultValue="false" />
 
     <com.exui.config.center.preferences.SystemSettingSeekBarPreference
        android:key="qs_blur_alpha"
@@ -119,6 +131,13 @@
        android:defaultValue="100"
        android:persistent="false"
        android:dependency="qs_blur" />
+
+    <com.exui.config.center.preferences.SystemSettingSeekBarPreference
+            android:key="powermenu_background_blur_intensity"
+            android:title="@string/blur_powermenu_intensity_title"
+            android:min="1"
+            android:max="100"
+            android:defaultValue="30" />
 
     </PreferenceCategory>
 
@@ -199,25 +218,6 @@
             android:summary="@string/synthos_center_notification_headers_summary"
             android:dependency="notification_headers"
             android:defaultValue="true" />
-
-    <com.exui.config.center.preferences.SystemSettingSwitchPreference
-            android:key="blur_powermenu_background"
-            android:title="@string/blur_powermenu_title"
-            android:summary="@string/blur_powermenu_summary"
-            android:defaultValue="false" />
-
-    <com.exui.config.center.preferences.SystemSettingSeekBarPreference
-            android:key="powermenu_background_blur_intensity"
-            android:title="@string/blur_powermenu_intensity_title"
-            android:min="1"
-            android:max="100"
-            android:defaultValue="30" />
-
-     <com.exui.config.center.preferences.SystemSettingSwitchPreference
-        android:key="synthos_hide_things_volumepanel"
-        android:summary="@string/synthos_hide_things_volumepanel_summary"
-        android:title="@string/synthos_hide_things_volumepanel_title"
-        android:defaultValue="false" />
 
     </PreferenceCategory>
 
