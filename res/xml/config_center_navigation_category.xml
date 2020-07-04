@@ -69,7 +69,7 @@
             android:key="synthos_hide_extended_volumepanel"
             android:summary="@string/synthos_hide_extended_volumepanel_summary"
             android:title="@string/synthos_hide_extended_volumepanel_title"
-            android:defaultValue="true" />
+            android:defaultValue="false" />
 
     </PreferenceCategory>
 
