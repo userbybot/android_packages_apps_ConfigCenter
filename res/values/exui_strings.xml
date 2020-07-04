@@ -37,7 +37,7 @@
     <string name="lockscreen_category">Lockscreen</string>
     <string name="uituner_category">UI Tuner</string>
     <string name="notifications_category">Notifications</string>
-    <string name="navigation_category">Navigation &amp; Buttons</string>
+    <string name="navigation_category">Navigation</string>
     <string name="about_category">About</string>
 
     <string name="clock_date_right">Right of time</string>
@@ -92,10 +92,10 @@
     <string name="clock_date_string_edittext_summary">Enter string</string>
 
      <!-- Blur Power menu -->
-    <string name="blur_powermenu_intensity_title">Blur Intensity</string>
+    <string name="blur_powermenu_intensity_title">Powermenu blur Intensity</string>
     <string name="blur_powermenu_title">Blur Powermenu</string>
     <string name="blur_powermenu_summary">Enable blur background on powermenu</string>
-    <string name="qs_blur_intensity_title">Blur intensity</string>
+    <string name="qs_blur_intensity_title">QS blur intensity</string>
     <string name="qs_blur_intensity_summary">Sets the blur intensity/radius</string>
 
     <!-- Network Traffic -->
@@ -159,7 +159,7 @@
     <string name="qs_category">Quick settings</string>
     <string name="interface_category">Interface</string>
     <string name="fod_category">Fingerprint on display</string>
-    <string name="navbar_category">Navigation bar</string>
+    <string name="navbar_category">Navigation Bar</string>
     <string name="buttons_category">Buttons</string>
     <string name="links_category">Links</string>
     <string name="devs_category">Devs</string>
@@ -176,17 +176,16 @@
     <string name="downloads_title">Downloads</string>
     <string name="downloads_summary">Place where you will find newest builds for all officially supported devices</string>
     <string name="telegram_channel">News channel</string>
-    <string name="telegram_channel_summary">Telegram channel where you will find changelogs, new features and general news about the EOM</string>
+    <string name="telegram_channel_summary">Telegram channel where you will find changelogs, new features and general news about the ROM</string>
     <string name="telegram_chat">Support chat</string>
     <string name="telegram_chat_summary">Telegram chat where we provide support for this rom</string>
     <string name="donation_link">Donations</string>
-    <string name="donation_link_summary">If you like the rom and want to help buy us a Coffee</string>
+    <string name="donation_link_summary">If you like the rom and want to help buy us a coffee</string>
     
     <!-- App Title -->
     <string name="config_center_title">ShapeShifter</string>
 
     <!-- Status bar tuner-->
-    
     <string name="statusbar_title">Icons</string>
     <string name="status_bar_items_summary">Add or remove status bar icons</string>
 
@@ -375,7 +374,7 @@
     <string name="media_art_title">Media artwork</string>
     <string name="media_art_summary">Show media cover art as the lockscreen background</string>
 
-    <string name="qs_blur_alpha_title">Blur alpha</string>
+    <string name="qs_blur_alpha_title">QS blur alpha</string>
     <string name="qs_blur_alpha_summary">Sets the blur transparency</string>
 
     <!-- Torch Power button gestures -->
@@ -405,11 +404,11 @@
     <string name="qs_columns_landscape_title">Tiles columns on landscape</string>
 
     <!-- Center R Notification headers -->
-    <string name="synthos_center_notification_headers_title">Center notification headers</string>
-    <string name="synthos_center_notification_headers_summary">Whether to Center R style notification headers (Requires a SystemUI restart)</string>
+    <string name="synthos_center_notification_headers_title">Centered notification headers</string>
+    <string name="synthos_center_notification_headers_summary">Whether to center R style notification headers (Requires a SystemUI restart)</string>
 
     <!-- Audio Panel view -->
-    <string name="audio_panel_view">Volume panel</string>
+    <string name="audio_panel_view">Extended volume panel</string>
     <string name="audio_panel_view_media_title">Media</string> 
     <string name="audio_panel_view_ringer_title">Ring</string> 
     <string name="audio_panel_view_notification_title">Notification</string> 
