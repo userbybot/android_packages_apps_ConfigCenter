@@ -109,7 +109,7 @@ public class ConfigCenter extends SettingsPreferenceFragment
         setHasOptionsMenu(true);
         bottomNavigation.setSelectedItemId(R.id.statusbar_category);
         switchFrag(new StatusBarFragment());
-        bottomNavigation.setLabelVisibilityMode(LabelVisibilityMode.LABEL_VISIBILITY_LABELED);
+        bottomNavigation.setLabelVisibilityMode(LabelVisibilityMode.LABEL_VISIBILITY_AUTO);
         return view;
     }
 
