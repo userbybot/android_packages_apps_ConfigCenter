@@ -121,7 +121,10 @@
     <string name="volte_icon_miui">VoLTE MIUI Icon</string>
     <string name="status_bar_volte_style_5">VoLTE Asus Icon</string>
     <string name="status_bar_volit">VoLit Icon</string>
-     <string name="volte_icon_emui">EMUI Icon</string>
+    <string name="volte_icon_emui">EMUI Icon</string>
+    <string name="status_bar_volte_style_sony">Sony Icon</string>
+    <string name="status_bar_volte_style_round">Pill Shape Icon</string>
+    <string name="status_bar_volte_style_toned">Square 2 Tone Icon</string>
 
     <!-- 4G icon -->
     <string name="statusbar_items_category">Icons</string>
