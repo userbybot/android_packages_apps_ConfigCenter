@@ -255,6 +255,7 @@
         <item>@string/volte_icon_volte</item>
         <item>@string/status_bar_volte_style_5</item>
         <item>@string/status_bar_volit</item>
+        <item>@string/volte_icon_emui</item>
     </string-array>
 
     <string-array name="volte_icon_type_values" translatable="false">
@@ -265,6 +266,7 @@
         <item>1</item>
         <item>5</item>
         <item>7</item>
+        <item>9</item>
     </string-array>
 
     <!-- FOD Recognizing fingerprint animations -->
