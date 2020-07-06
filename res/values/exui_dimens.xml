@@ -16,12 +16,4 @@
     <dimen name="floating_widget_view_padding">10dp</dimen>
     <dimen name="floating_widget_window_padding">10dp</dimen>
 
-    <!-- Cardview Preference -->
-    <dimen name="card_elevation">2dp</dimen>
-    <dimen name="card_corner_radius">1.5dp</dimen>
-    <dimen name="card_margin_top">6dp</dimen>
-    <dimen name="card_margin_bottom">6dp</dimen>
-    <dimen name="card_margin_right">12dp</dimen>
-    <dimen name="card_margin_left">12dp</dimen>
-
 </resources>

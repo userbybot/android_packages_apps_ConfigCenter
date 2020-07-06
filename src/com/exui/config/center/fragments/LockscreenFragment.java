@@ -44,7 +44,6 @@ public class LockscreenFragment extends SettingsPreferenceFragment
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.config_center_lockscreen_category);
-        setRetainInstance(true);
 
         PreferenceScreen prefScreen = getPreferenceScreen();
 

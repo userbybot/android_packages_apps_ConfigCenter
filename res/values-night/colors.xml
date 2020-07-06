@@ -19,12 +19,5 @@
 <resources>
 
     <color name="fod_item_background_stroke_color">#555555</color>
-    <color name="cardview_bg">@*android:color/primary_dark_device_default_settings</color>
-	
-    <color name="bottombar_bg">@*android:color/primary_dark_device_default_settings</color>
-	
-    <color name="bottombar_active">@*android:color/accent_device_default_dark</color>
-	
-    <color name="bottombar_ripple">#33ffffff</color>
 
 </resources>
