@@ -80,6 +80,11 @@
         android:summary="@string/clock_style_category_summary"
         android:fragment="com.exui.config.center.fragments.ClockSettings" />
 
+         <Preference
+            android:key="battery_bar_category"
+            android:fragment="com.exui.config.center.fragments.BatteryBar"
+            android:title="@string/battery_bar_title" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
