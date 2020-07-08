@@ -429,11 +429,12 @@
     <string name="battery_bar_blend_color_reverse_summary_off">Full &#8594; empty: red &#8592; green &#8592; blue &#8592; red</string>
     <string name="battery_bar_blend_color_reverse_summary_on">Full &#8594; empty: red &#8594; green &#8594; blue &#8594; red</string>
 
-   <!-- Volume panel Hide Things-->
-    <string name="synthos_hide_ringer_volumepanel_title">Hide Ringer below volu>
-    <string name="synthos_hide_ringer_volumepanel_summary">Hide Ringer Containe>
-    <string name="synthos_hide_extended_volumepanel_title">Hide Extended below >
-    <string name="synthos_hide_extended_volumepanel_summary">Hide Extended Cont>
+
+    <!-- Volume panel Hide Things-->
+    <string name="synthos_hide_ringer_volumepanel_title">Hide Ringer below volume panel</string>
+    <string name="synthos_hide_ringer_volumepanel_summary">Hide Ringer Container below volume panel</string>
+    <string name="synthos_hide_extended_volumepanel_title">Hide Extended below volume panel</string>
+    <string name="synthos_hide_extended_volumepanel_summary">Hide Extended Container below volume panel</string>
 
    <!-- Battery Settings -->
     <string name="battery_settings_title">Battery Settings</string>   
