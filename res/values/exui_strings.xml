@@ -14,12 +14,6 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- Volume panel Hide Things-->
-    <string name="synthos_hide_ringer_volumepanel_title">Hide Ringer below volume panel</string>
-    <string name="synthos_hide_ringer_volumepanel_summary">Hide Ringer Container below volume panel</string>
-    <string name="synthos_hide_extended_volumepanel_title">Hide Extended below volume panel</string>
-    <string name="synthos_hide_extended_volumepanel_summary">Hide Extended Container below volume panel</string>
-
     <!-- Categories -->
     <string name="statusbar_category">Status Bar</string>
     <string name="lockscreen_category">Lockscreen</string>
@@ -434,5 +428,33 @@
     <string name="battery_bar_blend_color_reverse_title">Reverse color direction</string>
     <string name="battery_bar_blend_color_reverse_summary_off">Full &#8594; empty: red &#8592; green &#8592; blue &#8592; red</string>
     <string name="battery_bar_blend_color_reverse_summary_on">Full &#8594; empty: red &#8594; green &#8594; blue &#8594; red</string>
+
+   <!-- Volume panel Hide Things-->
+    <string name="synthos_hide_ringer_volumepanel_title">Hide Ringer below volu>
+    <string name="synthos_hide_ringer_volumepanel_summary">Hide Ringer Containe>
+    <string name="synthos_hide_extended_volumepanel_title">Hide Extended below >
+    <string name="synthos_hide_extended_volumepanel_summary">Hide Extended Cont>
+
+   <!-- Battery Settings -->
+    <string name="battery_settings_title">Battery Settings</string>   
+
+    <!-- Battery Styles -->
+    <string name="battery_style_category_title">Battery styles</string>
+    <string name="battery_percent_title">Battery percent</string>
+
+    <!-- Status bar - Battery -->
+    <string name="status_bar_battery_style_title">Battery style</string>
+    <string name="status_bar_battery_style_icon_portrait">Icon portrait (default)</string>
+    <string name="status_bar_battery_style_circle">Circle</string>
+    <string name="status_bar_battery_style_dotted_circle">Circle (Dotted)</string>
+    <string name="status_bar_battery_style_filled_circle">Circle (Filled)</string>
+    <string name="status_bar_battery_style_text">Text</string>
+    <string name="status_bar_battery_style_hidden">Hidden</string>
+
+    <!-- Status bar - Battery percentage -->
+    <string name="status_bar_battery_percentage_title">Battery percentage</string>
+    <string name="status_bar_battery_percentage_default">Hidden (default)</string>
+    <string name="status_bar_battery_percentage_text_inside">Inside the icon</string>
+    <string name="status_bar_battery_percentage_text_next">Next to the icon</string>  
 
 </resources>
