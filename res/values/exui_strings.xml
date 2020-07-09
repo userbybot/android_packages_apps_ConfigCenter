@@ -110,7 +110,8 @@
     <string name="volte_icon_style_title">Select VoLTE Icon</string>
     <string name="volte_icon_vo">Default Icon</string>
     <string name="volte_icon_volte">VoLTE CAF Icon</string>
-    <string name="volte_icon_oos">VoLTE OOS Icon</string>
+    <string name="volte_icon_oos">VoLTE OOS Legacy Icon</string>
+    <string name="volte_icon_oosr">VoLTE OOS R Icon</string>
     <string name="volte_icon_hd">HD Icon</string>
     <string name="volte_icon_miui">VoLTE MIUI Icon</string>
     <string name="status_bar_volte_style_5">VoLTE Asus Icon</string>
