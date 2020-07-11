@@ -185,6 +185,7 @@
 
         <Preference
             android:key="themer_category"
+            android:summary="@string/theme_desc"
             android:fragment="com.exui.config.center.fragments.ThemeEngineFragment"
             android:title="@string/themer_category" />
 

@@ -54,17 +54,6 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:key="kitty_cat"
-        android:title="@string/general_controlization">
-
-    <Preference
-        android:key="notifications_category"
-        android:fragment="com.exui.config.center.fragments.NotificationsFragment"
-        android:title="@string/notifications_category" />
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
         android:key="statusbar_ntraffic"
         android:title="@string/statusbar_trafficat">
 
@@ -83,6 +72,7 @@
          <Preference
             android:key="battery_bar_category"
             android:fragment="com.exui.config.center.fragments.BatterySettings"
+        android:summary="@string/baffery_summary"
             android:title="@string/battery_settings_title" />
 
     </PreferenceCategory>
