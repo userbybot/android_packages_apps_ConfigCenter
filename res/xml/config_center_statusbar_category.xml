@@ -72,7 +72,7 @@
          <Preference
             android:key="battery_bar_category"
             android:fragment="com.exui.config.center.fragments.BatterySettings"
-        android:summary="@string/baffery_summary"
+        android:summary="@string/baffrey_summary"
             android:title="@string/battery_settings_title" />
 
     </PreferenceCategory>
