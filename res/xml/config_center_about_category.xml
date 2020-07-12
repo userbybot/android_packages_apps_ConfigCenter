@@ -125,6 +125,11 @@
             android:summary="Xiaomi Redmi 5A Maintainer">
         </Preference>  
               
+          <Preference
+            android:title="James Phạm"
+            android:summary="Xiaomi Redmi Note 5 Pro  Maintainer">
+        </Preference>   
+
     </PreferenceCategory>
 
 </PreferenceScreen>
