@@ -35,12 +35,14 @@ public class LockscreenFragment extends SettingsPreferenceFragment
 
     public static final String TAG = "LockscreenFragment";
      private static final String KEY_SCREEN_OFF_FOD = "screen_off_fod";
+     private static final String KEY_SCREEN_OFF_FOD_ICON = "screen_off_fod_icon";
     private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
 
     private ContentResolver mResolver;
      private SwitchPreference mScreenOffFOD;
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFingerprintVib;
+     private SystemSettingSwitchPreference mScreenOffFODIcon;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
