@@ -456,6 +456,7 @@
     <string name="status_bar_battery_percentage_text_next">Next to the icon</string>  
 
     <string name="theme_desc">Let\'s get this bread gamers</string>
+    <string name="fingerprint_subcat">Fingerprint</string>
 
     <string name="statusbar_bar_summary">Adjust various statusbar elements</string>
     <string name="notification_summary">Adjust LEDs and notification behavior</string>

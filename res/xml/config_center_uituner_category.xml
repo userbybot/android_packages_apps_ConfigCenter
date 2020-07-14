@@ -19,48 +19,6 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 	
     <PreferenceCategory
-        android:key="fod_category"
-        android:title="@string/fod_category">
-
-        <!-- FOD icon picker -->
-        <Preference
-            android:key="fod_icon_picker_category"
-            android:title="@string/fod_icon_picker_title"
-            android:summary="@string/fod_icon_picker_summary"
-            android:fragment="com.exui.config.center.fragments.FODIconPickerFragment" />
-
-        <!-- FOD use wallpaper color -->
-        <com.exui.config.center.preferences.SystemSettingSwitchPreference
-            android:key="fod_icon_wallpaper_color"
-            android:title="@string/fod_wallpaper_color"
-            android:summary="@string/fod_wallpaper_color_summary"
-            android:defaultValue="false" />
-
-        <!-- FOD recognizing animation -->
-            <com.exui.config.center.preferences.SystemSettingSwitchPreference
-                android:key="fod_recognizing_animation"
-                android:title="@string/fod_recog_animation"
-                android:summary="@string/fod_recog_animation_summary"
-                android:defaultValue="false" />
-
-            <com.exui.config.center.preferences.SystemSettingIntListPreference
-                android:key="fod_anim"
-                android:title="@string/fod_recog_animation_picker_title"
-                android:entries="@array/fod_recog_animation_entries"
-                android:entryValues="@array/fod_recog_animation_values"
-                android:defaultValue="0"
-                android:dependency="fod_recognizing_animation" />
-
-        <!-- Screen off FOD -->
-        <SwitchPreference
-            android:key="screen_off_fod"
-            android:title="@string/scr_off_fod"
-            android:summary="@string/scr_off_fod_summary"
-            android:defaultValue="false" />
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
         android:key="qs_category"
         android:title="@string/qs_category">
 

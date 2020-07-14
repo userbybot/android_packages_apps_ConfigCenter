@@ -34,9 +34,11 @@ public class LockscreenFragment extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
     public static final String TAG = "LockscreenFragment";
+     private static final String KEY_SCREEN_OFF_FOD = "screen_off_fod";
     private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
 
     private ContentResolver mResolver;
+     private SwitchPreference mScreenOffFOD;
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFingerprintVib;
 
@@ -47,6 +49,12 @@ public class LockscreenFragment extends SettingsPreferenceFragment
 
         PreferenceScreen prefScreen = getPreferenceScreen();
 
+         mResolver = getActivity().getContentResolver();
+
+        if (!getResources().getBoolean(com.android.internal.R.bool.config_supportsInDisplayFingerprint)) {
+            prefScreen.removePreference(findPreference("fod_category"));
+        }
+
         mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
         mFingerprintVib = (SwitchPreference) findPreference(FINGERPRINT_VIB);
         if (mFingerprintManager == null){
@@ -56,6 +64,15 @@ public class LockscreenFragment extends SettingsPreferenceFragment
                 Settings.System.FINGERPRINT_SUCCESS_VIB, 1) == 1));
             mFingerprintVib.setOnPreferenceChangeListener(this);
         }
+
+        boolean mScreenOffFODValue = Settings.System.getInt(mResolver,
+                Settings.System.SCREEN_OFF_FOD, 0) != 0;
+
+        mScreenOffFOD = (SwitchPreference) findPreference(KEY_SCREEN_OFF_FOD);
+        if (mScreenOffFOD != null) {
+            mScreenOffFOD.setChecked(mScreenOffFODValue);
+            mScreenOffFOD.setOnPreferenceChangeListener(this);
+        }
     }
 
     @Override
@@ -64,6 +81,12 @@ public class LockscreenFragment extends SettingsPreferenceFragment
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.FINGERPRINT_SUCCESS_VIB, value ? 1 : 0);
+            return true;
+        }
+        if (preference == mScreenOffFOD) {
+            int mScreenOffFODValue = (Boolean) newValue ? 1 : 0;
+            Settings.System.putInt(mResolver, Settings.System.SCREEN_OFF_FOD, mScreenOffFODValue);
+            Settings.Secure.putInt(mResolver, Settings.Secure.DOZE_ALWAYS_ON, mScreenOffFODValue);
             return true;
         }
         return false;
