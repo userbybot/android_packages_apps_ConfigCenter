@@ -57,16 +57,11 @@ public class UITunerFragment extends SettingsPreferenceFragment
 
         mResolver = getActivity().getContentResolver();
 
-        if (!getResources().getBoolean(com.android.internal.R.bool.config_supportsInDisplayFingerprint)) {
-            prefScreen.removePreference(findPreference("fod_category"));
-        }
-
         mQsBlurIntensity = (SystemSettingSeekBarPreference) findPreference(QS_BLUR_INTENSITY);
         int qsBlurIntensity = Settings.System.getInt(mContext.getContentResolver(),
                 Settings.System.QS_BLUR_INTENSITY, 100);
         mQsBlurIntensity.setValue(qsBlurIntensity);
         mQsBlurIntensity.setOnPreferenceChangeListener(this);
-        }
     }
 
     @Override
