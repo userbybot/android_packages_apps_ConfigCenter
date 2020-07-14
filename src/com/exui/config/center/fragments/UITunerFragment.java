@@ -42,11 +42,9 @@ public class UITunerFragment extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
     public static final String TAG = "UITunerFragment";
-    private static final String KEY_SCREEN_OFF_FOD = "screen_off_fod";
     private static final String QS_BLUR_INTENSITY = "qs_blur_intensity";
 
     private ContentResolver mResolver;
-    private SwitchPreference mScreenOffFOD;
     private SystemSettingSeekBarPreference mQsBlurIntensity;
 
     @Override
@@ -63,14 +61,6 @@ public class UITunerFragment extends SettingsPreferenceFragment
             prefScreen.removePreference(findPreference("fod_category"));
         }
 
-        boolean mScreenOffFODValue = Settings.System.getInt(mResolver,
-                Settings.System.SCREEN_OFF_FOD, 0) != 0;
-
-        mScreenOffFOD = (SwitchPreference) findPreference(KEY_SCREEN_OFF_FOD);
-        if (mScreenOffFOD != null) {
-            mScreenOffFOD.setChecked(mScreenOffFODValue);
-            mScreenOffFOD.setOnPreferenceChangeListener(this);
-
         mQsBlurIntensity = (SystemSettingSeekBarPreference) findPreference(QS_BLUR_INTENSITY);
         int qsBlurIntensity = Settings.System.getInt(mContext.getContentResolver(),
                 Settings.System.QS_BLUR_INTENSITY, 100);
@@ -81,12 +71,6 @@ public class UITunerFragment extends SettingsPreferenceFragment
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mScreenOffFOD) {
-            int mScreenOffFODValue = (Boolean) newValue ? 1 : 0;
-            Settings.System.putInt(mResolver, Settings.System.SCREEN_OFF_FOD, mScreenOffFODValue);
-            Settings.Secure.putInt(mResolver, Settings.Secure.DOZE_ALWAYS_ON, mScreenOffFODValue);
-            return true;
-        }
         if (preference == mQsBlurIntensity) {
             Context mContext = getContext();
             int value = (Integer) newValue;
