@@ -25,6 +25,13 @@
             android:summary="@string/smart_pixels_summary"
             android:fragment="com.exui.config.center.external.SmartPixels" />
 
+        <!-- Launch music player when headset is connected -->
+        <com.exui.config.center.preferences.SystemSettingSwitchPreference
+            android:key="headset_connect_player"
+            android:title="@string/headset_connect_player_title"
+            android:summary="@string/headset_connect_player_summary"
+            android:defaultValue="false" />
+
         <com.exui.config.center.preferences.SystemSettingSwitchPreference
             android:key="pocket_judge"
             android:title="@string/pocket_judge_title"
