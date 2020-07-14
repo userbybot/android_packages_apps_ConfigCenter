@@ -482,4 +482,7 @@
     <string name="use_old_mobiletype_title">Use old mobile type style</string>
     <string name="use_old_mobiletype_summary">Merge signal and type icons</string>
 
+    <string name="screen_off_fod_icon_title">Show icon</string>
+    <string name="screen_off_fod_icon_summary">Show fingerprint icon when the screen is off</string>
+
 </resources>
