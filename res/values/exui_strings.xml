@@ -467,4 +467,10 @@
     <string name="lockscreen_summary">Customize lockscreen layout and options</string>
     <string name="baffrey_summary">Battery bar and battery styles</string>
 
+    <string name="lockscreen_hide_status_bar_title">Hide Statusbar</string>
+    <string name="lockscreen_hide_status_bar_summary">When enabled, statusbar will be hidden on lockscreen</string>
+    <string name="hide_things">Hide things</string>
+    <string name="hide_lockicon_title">Hide lock icon</string>
+    <string name="hide_lockicon_summary">Hide the lock icon on lockscreen</string>
+
 </resources>
