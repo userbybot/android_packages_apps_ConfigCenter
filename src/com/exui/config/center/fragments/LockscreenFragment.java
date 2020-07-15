@@ -29,20 +29,21 @@ import com.android.internal.logging.nano.MetricsProto;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.exui.config.center.preferences.SystemSettingSwitchPreference;
 
 public class LockscreenFragment extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
     public static final String TAG = "LockscreenFragment";
-     private static final String KEY_SCREEN_OFF_FOD = "screen_off_fod";
-     private static final String KEY_SCREEN_OFF_FOD_ICON = "screen_off_fod_icon";
+    private static final String KEY_SCREEN_OFF_FOD = "screen_off_fod";
+    private static final String KEY_SCREEN_OFF_FOD_ICON = "screen_off_fod_icon";
     private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
 
     private ContentResolver mResolver;
-     private SwitchPreference mScreenOffFOD;
+    private SwitchPreference mScreenOffFOD;
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFingerprintVib;
-     private SystemSettingSwitchPreference mScreenOffFODIcon;
+    private SystemSettingSwitchPreference mScreenOffFODIcon;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
