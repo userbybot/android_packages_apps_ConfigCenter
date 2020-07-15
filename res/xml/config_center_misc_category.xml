@@ -48,7 +48,15 @@
    <Preference
         android:key="audio_panel" 
         android:fragment="com.exui.config.center.fragments.AudioPanelSettings"
+        android:summary="@string/force_extended_summary"
         android:title="@string/audio_panel_view" />
+
+        <com.exui.config.center.preferences.SystemSettingListPreference
+            android:key="screen_off_animation"
+            android:title="@string/screen_off_animation_title"
+            android:entries="@array/screen_off_animation_entries"
+            android:entryValues="@array/screen_off_animation_values"
+            android:defaultValue="0" />
 
     </PreferenceCategory>
 

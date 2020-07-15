@@ -485,4 +485,12 @@
     <string name="screen_off_fod_icon_title">Show icon</string>
     <string name="screen_off_fod_icon_summary">Show fingerprint icon when the screen is off</string>
 
+    <string name="force_extended_summary">Force extended volume panel for certain streams</string>
+
+    <!-- Screen Off animation -->
+    <string name="screen_off_animation_title">Screen off animation</string>
+    <string name="screen_off_animation_default">Default</string>
+    <string name="screen_off_animation_crt">CRT</string>
+    <string name="screen_off_animation_scale">Scale</string>
+
 </resources>
