@@ -382,7 +382,7 @@
 
     <!-- QS rows and columns -->
     <string name="qs_column_rows_settings_title">QS panel settings</string>
-    <string name="qs_columns_rows_category_title">QS columns and rows (Requires a SystemUI restart) </string>
+    <string name="qs_columns_rows_category_title">QS columns and rows</string>
     <string name="qs_rows_columns_title">QS rows and columns</string>
     <string name="qs_rows_portrait_title">Tiles rows on portrait</string>
     <string name="qs_rows_landscape_title">Tiles rows on landscape</string>
@@ -480,7 +480,7 @@
     <!-- StatusBar -->
     <string name="statusbar_settings_category">Status Bar</string>
     <string name="use_old_mobiletype_title">Use old mobile type style</string>
-    <string name="use_old_mobiletype_summary">Merge signal and type icons</string>
+    <string name="use_old_mobiletype_summary">Merge signal and type icons (Requires a SystemUI restart)</string>
 
     <string name="screen_off_fod_icon_title">Show icon</string>
     <string name="screen_off_fod_icon_summary">Show fingerprint icon when the screen is off</string>
