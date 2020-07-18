@@ -60,19 +60,6 @@
             android:title="@string/volume_rocker_music_controls_title"
             android:defaultValue="false" />
 
-         <com.exui.config.center.preferences.SystemSettingSwitchPreference
-            android:key="synthos_hide_ringer_volumepanel"
-            android:summary="@string/synthos_hide_ringer_volumepanel_summary"
-            android:title="@string/synthos_hide_ringer_volumepanel_title"
-            android:defaultValue="false" />
-
-         <com.exui.config.center.preferences.SystemSettingSwitchPreference
-            android:key="synthos_hide_extended_volumepanel"
-            android:summary="@string/synthos_hide_extended_volumepanel_summary"
-            android:title="@string/synthos_hide_extended_volumepanel_title"
-            android:dependency="synthos_hide_ringer_volumepanel"
-            android:defaultValue="false" />
-
     </PreferenceCategory>
 
 </PreferenceScreen>

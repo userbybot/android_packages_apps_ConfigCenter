@@ -393,16 +393,6 @@
     <string name="synthos_center_notification_headers_title">Centered notification headers</string>
     <string name="synthos_center_notification_headers_summary">Whether to center R style notification headers (Requires a SystemUI restart)</string>
 
-    <!-- Audio Panel view -->
-    <string name="audio_panel_view">Extended volume panel</string>
-    <string name="audio_panel_view_media_title">Media</string> 
-    <string name="audio_panel_view_ringer_title">Ring</string> 
-    <string name="audio_panel_view_notification_title">Notification</string> 
-    <string name="audio_panel_view_alarm_title">Alarm</string> 
-    <string name="audio_panel_view_voice_title">Voice</string>
-    <string name="audio_panel_view_bt_sco_title">Bluetooth</string>
-
-
     <!-- Battery Bar -->
     <string name="battery_bar_title">Battery bar</string>
     <string name="battery_bar_summary">Display and customize battery bar near status bar or navigation bar</string>
@@ -426,12 +416,6 @@
     <string name="battery_bar_blend_color_reverse_summary_off">Full &#8594; empty: red &#8592; green &#8592; blue &#8592; red</string>
     <string name="battery_bar_blend_color_reverse_summary_on">Full &#8594; empty: red &#8594; green &#8594; blue &#8594; red</string>
 
-
-    <!-- Volume panel Hide Things-->
-    <string name="synthos_hide_ringer_volumepanel_title">Hide Ringer below volume panel</string>
-    <string name="synthos_hide_ringer_volumepanel_summary">Hide Ringer Container below volume panel</string>
-    <string name="synthos_hide_extended_volumepanel_title">Hide Extended below volume panel</string>
-    <string name="synthos_hide_extended_volumepanel_summary">Hide Extended Container below volume panel</string>
 
    <!-- Battery Settings -->
     <string name="battery_settings_title">Battery Settings</string>   
