@@ -34,7 +34,7 @@ public class AccentColorPreferenceController extends AbstractPreferenceControlle
         Preference.OnPreferenceChangeListener {
 
     private static final String ACCENT_COLOR = "accent_color";
-    static final int DEFAULT_ACCENT_COLOR = 0xff0060ff;
+    static final int DEFAULT_ACCENT_COLOR = 0xff1a73e8;
     private static final String ACCENT_OVERLAY = "android.theme.customization.accent_color";
 
     private ColorPickerPreference mAccentColor;
@@ -62,8 +62,8 @@ public class AccentColorPreferenceController extends AbstractPreferenceControlle
         mAccentColor.setOnPreferenceChangeListener(this);
         int intColor = Settings.System.getIntForUser(mContext.getContentResolver(),
                 Settings.System.ACCENT_COLOR, DEFAULT_ACCENT_COLOR, UserHandle.USER_CURRENT);
-        String hexColor = String.format("#%08x", (0xff0060ff & intColor));
-        if (hexColor.equals("#ff0060ff")) {
+        String hexColor = String.format("#%08x", (0xff1a73e8 & intColor));
+        if (hexColor.equals("#ff1a73e8")) {
             mAccentColor.setSummary(R.string.default_string);
             mAccentOverlay.setEnabled(true);
         } else {
@@ -81,7 +81,7 @@ public class AccentColorPreferenceController extends AbstractPreferenceControlle
         if (preference == mAccentColor) {
             String hex = ColorPickerPreference.convertToARGB(
                     Integer.valueOf(String.valueOf(newValue)));
-            if (hex.equals("#ff0060ff")) {
+            if (hex.equals("#ff1a73e8")) {
                 mAccentColor.setSummary(R.string.default_string);
                 mAccentOverlay.setEnabled(true);
             } else {
