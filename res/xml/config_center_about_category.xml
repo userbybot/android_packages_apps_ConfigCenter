@@ -114,11 +114,6 @@
             android:title="kalmin06"
             android:summary="Xiaomi Redmi Note 7 Pro Maintainer">
         </Preference>        
-         
-          <Preference
-            android:title="1cecreamm"
-            android:summary="Xiaomi Mi 8 Lite Maintainer">
-        </Preference>  
 
           <Preference
             android:title="ZennaApr"
