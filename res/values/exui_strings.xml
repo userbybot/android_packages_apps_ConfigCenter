@@ -505,4 +505,12 @@
     <string name="fod_pressed_state_vivo_green">Vivo Green</string>
     <string name="fod_pressed_state_vivo_yellow_shadow">Vivo Yellow (Shadow)</string>
 
+    <!-- Fingerprint unlock keystore -->
+    <string name="fp_unlock_keystore_title">Fingerprint unlock</string>
+    <string name="fp_unlock_keystore_summary">Unlock device with fingerprint after reboot\nNote: Not recommended on encrypted devices!</string>
+
+    <!-- Force disable transition animation -->
+    <string name="disable_transition_animations_title">Disable transition animations</string>
+    <string name="disable_transition_animations_summary">Force disable all transition animations</string>
+
 </resources>
