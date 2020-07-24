@@ -18,7 +18,7 @@
  * key is identical to the target ConfigMap tag in ActionConstants
  */
 
-package com.eexui.config.center.preferences;
+package com.exui.config.center.preferences;
 
 import java.util.Map;
 

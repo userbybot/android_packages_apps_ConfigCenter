@@ -104,7 +104,7 @@ public class NavigationFragment extends ActionFragment
         int keysDisabled = 0;
         if (!needsNavbar) {
             mHwKeyDisable = (SwitchPreference) findPreference(HWKEY_DISABLE);
-            keysDisabled = Settings.Secure.getIntForUser(mResolver(),
+            keysDisabled = Settings.Secure.getIntForUser(mResolver,
                     Settings.Secure.HARDWARE_KEYS_DISABLE, 0,
                     UserHandle.USER_CURRENT);
             mHwKeyDisable.setChecked(keysDisabled != 0);
@@ -124,7 +124,7 @@ public class NavigationFragment extends ActionFragment
 
                 if (mBacklightTimeout != null) {
                     mBacklightTimeout.setOnPreferenceChangeListener(this);
-                    int BacklightTimeout = Settings.System.getInt(mResolver(),
+                    int BacklightTimeout = Settings.System.getInt(mResolver,
                             Settings.System.BUTTON_BACKLIGHT_TIMEOUT, 5000);
                     mBacklightTimeout.setValue(Integer.toString(BacklightTimeout));
                     mBacklightTimeout.setSummary(mBacklightTimeout.getEntry());
@@ -133,7 +133,7 @@ public class NavigationFragment extends ActionFragment
                 if (variableBrightness) {
                     hwkeyCat.removePreference(mButtonBrightness_sw);
                     if (mButtonBrightness != null) {
-                        int ButtonBrightness = Settings.System.getInt(mResolver(),
+                        int ButtonBrightness = Settings.System.getInt(mResolver,
                                 Settings.System.BUTTON_BRIGHTNESS, 255);
                         mButtonBrightness.setValue(ButtonBrightness / 1);
                         mButtonBrightness.setOnPreferenceChangeListener(this);
@@ -141,7 +141,7 @@ public class NavigationFragment extends ActionFragment
                 } else {
                     hwkeyCat.removePreference(mButtonBrightness);
                     if (mButtonBrightness_sw != null) {
-                        mButtonBrightness_sw.setChecked((Settings.System.getInt(mResolver(),
+                        mButtonBrightness_sw.setChecked((Settings.System.getInt(mResolver,
                                 Settings.System.BUTTON_BRIGHTNESS, 1) == 1));
                         mButtonBrightness_sw.setOnPreferenceChangeListener(this);
                     }

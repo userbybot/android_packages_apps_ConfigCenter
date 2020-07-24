@@ -28,9 +28,9 @@ import com.android.internal.util.hwkeys.Config;
 import com.android.internal.util.hwkeys.Config.ActionConfig;
 import com.android.internal.util.hwkeys.Config.ButtonConfig;
 
-import com.evolution.settings.preference.ShortcutPickHelper;
-import com.evolution.settings.preference.ActionPreference;
-import com.evolution.settings.preference.CustomActionListAdapter;
+import com.exui.config.center.preferences.ShortcutPickHelper;
+import com.exui.config.center.preferences.ActionPreference;
+import com.exui.config.center.preferences.CustomActionListAdapter;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -165,7 +165,7 @@ public class ActionFragment extends SettingsPreferenceFragment implements
         switch (dialogId) {
             case DIALOG_CATEGORY:
             case DIALOG_CUSTOM_ACTIONS:
-                return MetricsEvent.EVO_SETTINGS;
+                return MetricsEvent.CUSTOM_SETTINGS;
             default:
                 return 0;
         }

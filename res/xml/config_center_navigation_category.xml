@@ -53,7 +53,7 @@
             android:summary="@string/haptic_on_action_summary"
             android:defaultValue="false" />
 
-        <com.evolution.settings.preference.SystemSettingSwitchPreference
+        <com.exui.config.center.preferences.SystemSettingSwitchPreference
             android:key="anbi_enabled_option"
             android:title="@string/anbi_title"
             android:summary="@string/anbi_summary"
