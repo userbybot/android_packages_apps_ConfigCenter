@@ -24,7 +24,18 @@ import android.os.SystemProperties;
 import android.provider.Settings;
 import androidx.preference.*;
 
+import android.content.res.Resources;
+import android.os.UserHandle;
+import android.os.Vibrator;
+import android.content.DialogInterface;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
+import android.app.Fragment;
+import android.provider.Settings;
+
 import com.android.internal.logging.nano.MetricsProto; 
+import com.exui.config.center.preferences.CustomSeekBarPreference;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -39,6 +50,16 @@ public class NavigationFragment extends SettingsPreferenceFragment
     private static final String SYSUI_NAV_BAR = "sysui_nav_bar";
     private static final String TORCH_POWER_BUTTON_GESTURE = "torch_power_button_gesture";
 
+    //Keys
+    private static final String KEY_BUTTON_BRIGHTNESS = "button_brightness";
+    private static final String KEY_BACKLIGHT_TIMEOUT = "backlight_timeout";
+
+    // category keys
+    private static final String CATEGORY_HWKEY = "hardware_keys";
+
+    private ListPreference mBacklightTimeout;
+    private CustomSeekBarPreference mButtonBrightness;
+
     private ListPreference mNavBarLayout;
     private ContentResolver mResolver;
     private SwitchPreference mTorchPowerButton;
@@ -49,6 +70,30 @@ public class NavigationFragment extends SettingsPreferenceFragment
         addPreferencesFromResource(R.xml.config_center_navigation_category);
 
         mResolver = getActivity().getContentResolver();
+
+        final Resources res = getResources();
+        final PreferenceScreen prefScreen = getPreferenceScreen();
+
+        mBacklightTimeout =
+                (ListPreference) findPreference(KEY_BACKLIGHT_TIMEOUT);
+        mButtonBrightness =
+                (CustomSeekBarPreference) findPreference(KEY_BUTTON_BRIGHTNESS);
+
+        if (mBacklightTimeout != null) {
+            mBacklightTimeout.setOnPreferenceChangeListener(this);
+            int BacklightTimeout = Settings.System.getInt(mResolver,
+                 Settings.System.BUTTON_BACKLIGHT_TIMEOUT, 5000);
+            mBacklightTimeout.setValue(Integer.toString(BacklightTimeout));
+            mBacklightTimeout.setSummary(mBacklightTimeout.getEntry());
+        }
+
+        if (mButtonBrightness != null) {
+            int ButtonBrightness = Settings.System.getInt(mResolver,
+                    Settings.System.BUTTON_BRIGHTNESS, 255);
+            mButtonBrightness.setValue(ButtonBrightness / 1);
+            mButtonBrightness.setOnPreferenceChangeListener(this);
+        }
+
 
         mNavBarLayout = (ListPreference) findPreference(NAV_BAR_LAYOUT);
         mNavBarLayout.setOnPreferenceChangeListener(this);
@@ -68,11 +113,11 @@ public class NavigationFragment extends SettingsPreferenceFragment
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+         ContentResolver resolver = getActivity().getContentResolver();
         if (preference == mNavBarLayout) {
             Settings.Secure.putString(mResolver, SYSUI_NAV_BAR, (String) newValue);
             return true;
-        } 
-        if (preference == mTorchPowerButton) {
+        } else if (preference == mTorchPowerButton) {
             boolean mTorchPowerButtonValue = (Boolean) newValue;
             if (mTorchPowerButtonValue) {
                 Settings.Secure.putInt(mResolver, Settings.Secure.TORCH_POWER_BUTTON_GESTURE,
@@ -81,6 +126,21 @@ public class NavigationFragment extends SettingsPreferenceFragment
                 Settings.Secure.putInt(mResolver, Settings.Secure.TORCH_POWER_BUTTON_GESTURE,
                 0);
             }
+            return true;
+        } else if (preference == mBacklightTimeout) {
+            String BacklightTimeout = (String) newValue;
+            int BacklightTimeoutValue = Integer.parseInt(BacklightTimeout);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.BUTTON_BACKLIGHT_TIMEOUT, BacklightTimeoutValue);
+            int BacklightTimeoutIndex = mBacklightTimeout
+                    .findIndexOfValue(BacklightTimeout);
+            mBacklightTimeout
+                    .setSummary(mBacklightTimeout.getEntries()[BacklightTimeoutIndex]);
+            return true;
+        } else if (preference == mButtonBrightness) {
+            int value = (Integer) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.BUTTON_BRIGHTNESS, value * 1);
             return true;
         }
         return false;
