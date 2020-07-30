@@ -124,10 +124,17 @@
             android:title="James Phạm"
             android:summary="Xiaomi Redmi Note 5 Pro  Maintainer">
         </Preference>   
+
            <Preference
             android:title="xK4m3l"
             android:summary="Xiaomi Mi Mix 2S  Maintainer">
         </Preference> 
+
+           <Preference
+            android:title="NitroFuNxD"
+            android:summary="Xiaomi Redmi Note 8/8T  Maintainer">
+        </Preference> 
+
     </PreferenceCategory>
 
 </PreferenceScreen>
