@@ -37,6 +37,12 @@
         android:key="home_key"
         android:title="@string/hardware_keys_home_key_title" >
 
+        <com.exui.config.center.preferences.SystemSettingSwitchPreference
+            android:key="allow_incall_home"
+            android:title="@string/allow_incall_home_title"
+            android:summary="@string/allow_incall_home_summary"
+            android:defaultValue="true" />
+
         <com.exui.config.center.preferences.ActionPreference
             android:key="hwkeys_button_home_long_press"
             android:summary="@string/hardware_keys_long_press_summary"
