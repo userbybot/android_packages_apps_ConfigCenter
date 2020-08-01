@@ -16,6 +16,29 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory
+        android:key="backlights_hwkeys"
+        android:title="@string/button_brightness_title" >
+
+        <com.exui.config.center.preferences.CustomSeekBarPreference
+            android:key="button_brightness"
+            android:title="@string/button_brightness_title"
+            android:max="255"
+            settings:min="0"
+            settings:units=""
+            android:persistent="false" />
+
+        <ListPreference
+            android:dialogTitle="@string/backlight_timeout_title"
+            android:entries="@array/backlight_timeout_entries"
+            android:entryValues="@array/backlight_timeout_values"
+            android:key="backlight_timeout"
+            android:persistent="false"
+            android:title="@string/backlight_timeout_title" />
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
         android:key="back_key"
         android:title="@string/hardware_keys_back_key_title" >
 
