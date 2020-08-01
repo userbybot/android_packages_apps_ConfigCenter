@@ -67,6 +67,12 @@
         android:key="super_button_category"
         android:title="@string/buttons_super_category_subcat" >
 
+        <com.exui.config.center.preferences.SystemSettingSwitchPreference
+            android:key="haptic_on_action_key"
+            android:title="@string/haptic_on_action_title"
+            android:summary="@string/haptic_on_action_summary"
+            android:defaultValue="false" />
+
         <PreferenceScreen
             android:key="hardware_keys"
             android:title="@string/hardware_keys"
