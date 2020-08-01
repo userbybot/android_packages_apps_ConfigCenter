@@ -19,6 +19,11 @@
         android:key="backlights_hwkeys"
         android:title="@string/button_brightness_title" >
 
+        <SwitchPreference
+            android:key="button_brightness_sw"
+            android:title="@string/button_brightness_sw_title"
+            android:persistent="false" />
+
         <com.exui.config.center.preferences.CustomSeekBarPreference
             android:key="button_brightness"
             android:title="@string/button_brightness_title"
