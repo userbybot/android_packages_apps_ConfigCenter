@@ -15,8 +15,9 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    
     <PreferenceCategory
-        android:key="backlights_hwkeys"
+        android:key="backlight_category"
         android:title="@string/button_brightness_title" >
 
         <SwitchPreference
@@ -41,7 +42,6 @@
             android:title="@string/backlight_timeout_title" />
 
     </PreferenceCategory>
-
 
     <PreferenceCategory
         android:key="back_key"
