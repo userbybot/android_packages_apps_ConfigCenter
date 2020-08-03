@@ -587,4 +587,8 @@
     <string name="button_brightness_title">Backlight</string>
     <string name="button_brightness_sw_title">Enable backlight</string>
 
+    <string name="theme_customization_sysui_icon_title">SystemUI overlays</string>
+    <string name="theme_customization_settings_icon_title">Settings overlays</string>
+    <string name="theme_customization_primary_title">Base Theme</string>
+
 </resources>
